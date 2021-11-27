@@ -14,5 +14,4 @@ class Index(View):
         """
         GET method for the Home Index page
         """
-        context = {'title': 'Home'}
-        return render(request, 'home/index.html', context)
+        return render(request, 'home/index.html')
