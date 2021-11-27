@@ -1,8 +1,8 @@
 """
 Class views for the Home
 """
-from django.http import HttpResponse
 from django.views import View
+from django.shortcuts import render
 
 
 class Index(View):
@@ -10,8 +10,9 @@ class Index(View):
     Class view for the Home Index page
     """
 
-    def get(self, request):
+    def get(self, request, *args, **kwargs):
         """
         GET method for the Home Index page
         """
-        return HttpResponse(request)
+        context = {'title': 'Home'}
+        return render(request, 'home/index.html', context)
