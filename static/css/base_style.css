@@ -2,14 +2,32 @@ html {
     height: 100%;
 }
 
+body {
+    background-color: gray;
+}
+
 /*Custom Code for the Header Section*/
 .page-header {
     height: 100%;
 }
 
+.social-links li{
+    display:inline;
+    list-style-type: none;
+}
+
+.customer-links li{
+    display:inline;
+    list-style-type: none;
+}
+
+.navbar {
+    height: 100px;
+    background-color: rgba(0, 0, 0, .4);
+}
+
 /*Custom Code for the Footer Section*/
 .page-footer {
-    background-color: black;
-    color: blanchedalmond;
+    color: white;
     height: 125px;
 }

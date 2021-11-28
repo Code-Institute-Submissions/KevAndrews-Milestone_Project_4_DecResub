@@ -27,8 +27,52 @@
 <body>
     <!--Custom Code for the header using bootstrap template-->
     <header class="page-header">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Top Links -->
+        <div class="top-links">
+            <div class="container-fluid d-flex">
+                <div class="social-container mr-auto p-2">
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://facebook.com/" target="_blank">
+                                <i class="fab fa-facebook fa-lg"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank">
+                                <span class="fab fa-twitter fa-lg"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com/" target="_blank">
+                                <span class="fab fa-youtube fa-lg"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="customer-container p-2">
+                    <ul class="customer-links">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#modalSearch">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#modalLogin">
+                                <i class="fa fa-user"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="item-count">2</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Gamers Corner</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -46,27 +90,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Genres</a>
-                        </li>
-                        <li class="nav-item">
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
-                                    aria-label="Search">
-                            </form>
-                        </li>
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-info">Login</button>
-                        </li>
-                        <li class="nav-item">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg text-white"></i></div>
-                                <p class="my-0 text-white">
-                                    {% if grand_total %}
-                                        &euro;{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    &euro;0.00
-                                    {% endif %}
-                                </p>
-                            </div>
                         </li>
                     </ul>
                 </div>
@@ -86,7 +109,7 @@
     {% endblock %}
 
     <!--Custom Code for the footer using bootstrap template-->
-    <footer class="page-footer font-small pt-4">
+    <footer class="page-footer font-small pt-4 bg-dark">
         <div class="footer-copyright text-center py-3">
             © 2021 Copyright Kevin Andrews
         </div>
