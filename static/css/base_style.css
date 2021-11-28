@@ -1,0 +1,15 @@
+html {
+    height: 100%;
+}
+
+/*Custom Code for the Header Section*/
+.page-header {
+    height: 100%;
+}
+
+/*Custom Code for the Footer Section*/
+.page-footer {
+    background-color: black;
+    color: blanchedalmond;
+    height: 125px;
+}

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/base_style.css' %}">
+    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
@@ -25,9 +26,9 @@
 
 <body>
     <!--Custom Code for the header using bootstrap template-->
-    <header>
+    <header class="page-header">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Gamers Corner</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -55,6 +56,18 @@
                         <li class="nav-item">
                             <button type="button" class="btn btn-info">Login</button>
                         </li>
+                        <li class="nav-item">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg text-white"></i></div>
+                                <p class="my-0 text-white">
+                                    {% if grand_total %}
+                                        &euro;{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    &euro;0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -73,8 +86,10 @@
     {% endblock %}
 
     <!--Custom Code for the footer using bootstrap template-->
-    <footer>
-       
+    <footer class="page-footer font-small pt-4">
+        <div class="footer-copyright text-center py-3">
+            © 2021 Copyright Kevin Andrews
+        </div>
     </footer>
 </body>
 
