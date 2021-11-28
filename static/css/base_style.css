@@ -3,31 +3,47 @@ html {
 }
 
 body {
-    background-color: gray;
+    background-color: #0a0717;
+    font-family: 'Rubik', sans-serif;
+}
+
+.active {
+    text-decoration: underline;
 }
 
 /*Custom Code for the Header Section*/
 .page-header {
     height: 100%;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar-brand {
+    font-size: 22pt;
 }
 
 .social-links li{
-    display:inline;
+    display: inline;
     list-style-type: none;
 }
 
+.social-links{
+    padding: 0px;
+}
+
 .customer-links li{
-    display:inline;
+    display: inline;
     list-style-type: none;
 }
 
 .navbar {
     height: 100px;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(100, 100, 100, .4);
 }
 
 /*Custom Code for the Footer Section*/
 .page-footer {
     color: white;
-    height: 125px;
+    height: 100px;
+    background-color: rgba(100, 100, 100, .4);
+    font-family: 'Orbitron', sans-serif;
 }
