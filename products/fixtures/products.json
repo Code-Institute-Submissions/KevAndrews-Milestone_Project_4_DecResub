@@ -1,0 +1,67 @@
+[
+  {
+    "pk": 1,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg0001",
+      "name": "Product_1",
+      "description": "First product in a long line",
+      "price": 29.81,
+      "category": 1,
+      "image_url": "{{ MEDIA_URL }}media/noimage.png",
+      "image": "noimage.png"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg0002",
+      "name": "Product_2",
+      "description": "Second product in a long line",
+      "price": 33.27,
+      "category": 2,
+      "image_url": "{{ MEDIA_URL }}media/noimage.png",
+      "image": "noimage.png"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg0003",
+      "name": "Product_3",
+      "description": "Third product in a long line",
+      "price": 11.70,
+      "category": 3,
+      "image_url": "{{ MEDIA_URL }}media/noimage.png",
+      "image": "noimage.png"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg0004",
+      "name": "Product_4",
+      "description": "Fourth product in a long line",
+      "price": 15.63,
+      "category": 4,
+      "image_url": "{{ MEDIA_URL }}media/noimage.png",
+      "image": "noimage.png"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg0005",
+      "name": "Product_5",
+      "description": "Fifth product in a long line",
+      "price": 47.57,
+      "category": 5,
+      "image_url": "{{ MEDIA_URL }}media/noimage.png",
+      "image": "noimage.png"
+    }
+  }
+]

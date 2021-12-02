@@ -1,0 +1,74 @@
+[
+  {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+          "name": "action",
+          "friendly_name": "Action"
+      }
+  },
+  {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+          "name": "fps",
+          "friendly_name": "FPS"
+      }
+  },
+  {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+          "name": "rpg",
+          "friendly_name": "RPG"
+      }
+  },
+  {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+          "name": "sports",
+          "friendly_name": "Sports"
+      }
+  },
+  {
+      "pk": 5,
+      "model": "products.category",
+      "fields": {
+          "name": "horror",
+          "friendly_name": "Horror"
+      }
+  },
+  {
+      "pk": 6,
+      "model": "products.category",
+      "fields": {
+          "name": "platformer",
+          "friendly_name": "Platformer"
+      }
+  },
+  {
+      "pk": 7,
+      "model": "products.category",
+      "fields": {
+          "name": "adventure",
+          "friendly_name": "Adventure"
+      }
+  },
+  {
+      "pk": 8,
+      "model": "products.category",
+      "fields": {
+          "name": "fighter",
+          "friendly_name": "Fighter"
+      }
+  },
+  {
+      "pk": 9,
+      "model": "products.category",
+      "fields": {
+          "name": "puzzel",
+          "friendly_name": "Puzzel"
+      }
+  }
+]
