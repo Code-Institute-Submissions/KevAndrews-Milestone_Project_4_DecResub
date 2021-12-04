@@ -36,7 +36,7 @@
                 <div class="customer-container ml-auto p-2">
                     <ul class="customer-links list-inline float-right">
                         <li class="list-inline-item">
-                            <a href="#" onclick="myFunction()">
+                            <a href="#" onclick="toggleSearch()">
                                 <i class="fa fa-search fa-lg text-white align-text-bottom"></i>
                             </a>
                         </li>
@@ -52,8 +52,8 @@
                             </a>
                         </li>
                     </ul>
-                    <form id="search-bar" action="#">
-                        <input class="selected float-right" type="text" id="search" name="search" placeholder="Search..">
+                    <form class="search-form" method="GET" action="{% url 'games' %}">
+                        <input class="search-toggle-collapse float-right" type="text" id="search" name="search" placeholder="Search...">
                     </form>
                 </div>
             </div>
@@ -70,11 +70,33 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'games' %}">All Games</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="all-games-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All Games
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="all-games-link">
+                                <a href="{% url 'games' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                                <a href="{% url 'games' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                                <a href="{% url 'games' %}?sort=name&direction=asc" class="dropdown-item ">By Name</a>
+                                <a href="{% url 'games' %}" class="dropdown-item">All Games</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Genres</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="games-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Genre
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="games-link">
+                                <a href="{% url 'games' %}?category=action" class="dropdown-item">Action</a>
+                                <a href="{% url 'games' %}?category=adventure" class="dropdown-item">Adventure</a>
+                                <a href="{% url 'games' %}?category=fighter" class="dropdown-item">Fighter</a>
+                                <a href="{% url 'games' %}?category=fps" class="dropdown-item">First Person Shooters</a>
+                                <a href="{% url 'games' %}?category=horror" class="dropdown-item">Horror</a>
+                                <a href="{% url 'games' %}?category=platformer" class="dropdown-item">Platformer</a>
+                                <a href="{% url 'games' %}?category=puzzel" class="dropdown-item">Puzzel</a>
+                                <a href="{% url 'games' %}?category=sports" class="dropdown-item">Sports</a>
+                                <a href="{% url 'games' %}?category=rpg" class="dropdown-item">Role-Playing Games</a>
+                                <a href="{% url 'games' %}" class="dropdown-item">All Genres</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -118,10 +140,10 @@
             </ul>
         </div>
     </footer>
-    <script>
-        function myFunction() {
-            var element = document.getElementById("search");
-            element.classList.toggle("mystyle");
+    <script type="text/javascript">
+        function toggleSearch() {
+            var search = document.getElementById("search");
+            search.classList.toggle("search-toggle");
         }
     </script>
 </body>

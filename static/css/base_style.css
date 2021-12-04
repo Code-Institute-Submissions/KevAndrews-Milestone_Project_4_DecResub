@@ -11,18 +11,23 @@ body {
     text-decoration: underline;
 }
 
-.navbar-toggler {
-    cursor: pointer;
-}
-
 /*Custom Code for the Header Section*/
 .page-header {
     height: 100%;
     font-family: 'Orbitron', sans-serif;
 }
 
+.navbar-toggler {
+    cursor: pointer;
+}
+
 .navbar-brand {
     font-size: 22pt;
+}
+
+.navbar {
+    height: 100px;
+    background-color: rgba(100, 100, 100, .4);
 }
 
 .social-links li{
@@ -34,14 +39,42 @@ body {
     padding: 0px;
 }
 
+.customer-links {
+    margin-left: 5px;
+}
+
 .customer-links li{
     display: inline;
     list-style-type: none;
 }
 
-.navbar {
-    height: 100px;
-    background-color: rgba(100, 100, 100, .4);
+.customer-links li a{
+    text-decoration: none;
+}
+
+.customer-links li a:active{
+    text-decoration: none;
+}
+
+/*Custom Code for search bar*/
+.search-toggle-collapse {
+    visibility: collapse;
+    width: 0;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+    transition: ease-out .1s;
+}
+
+.search-toggle {
+    visibility: visible;
+    width: 150px;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+    transition: ease-in 1.25s;
+}
+
+.customer-container {
+    width: 350px;
 }
 
 /*Custom Code for the Card Display*/
@@ -55,22 +88,6 @@ body {
     height: 100px;
     background-color: rgba(100, 100, 100, .4);
     font-family: 'Orbitron', sans-serif;
-}
-
-.selected {
-    visibility: collapse;
-    width: 0;
-    transition: all .1s;
-}
-
-.mystyle {
-    visibility: visible;
-    width: 150px;
-    transition: all 1.25s;
-}
-
-.customer-container {
-    width: 350px;
 }
 
 /*Test CSS for mobile menu https://www.codeply.com/go/JPkcW2yWrB*/

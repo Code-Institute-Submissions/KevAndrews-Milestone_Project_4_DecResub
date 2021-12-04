@@ -18,6 +18,8 @@ class AllGames(View):
     def get(self, request):
         """
         GET method for the All Games page
+        Used Boutique Ado project for logic and updated it 
+        to work in this project
         """
         games = Game.objects.all()
         query = None
@@ -46,8 +48,8 @@ class AllGames(View):
             games = games.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-        if 'q' in request.GET:
-            query = request.GET['q']
+        if 'search' in request.GET:
+            query = request.GET['search']
             if not query:
                 messages.error(
                     request, "You didn't enter any search criteria!")
