@@ -33,44 +33,28 @@
         <!-- Top Links -->
         <div class="top-links container">
             <div class="d-flex">
-                <div class="social-container mr-auto p-2">
-                    <ul class="social-links">
-                        <li>
-                            <a href="https://facebook.com/" target="_blank">
-                                <i class="fab fa-facebook fa-lg text-white align-text-bottom"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank">
-                                <span class="fab fa-twitter fa-lg text-white align-text-bottom"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://youtube.com/" target="_blank">
-                                <span class="fab fa-youtube fa-lg text-white align-text-bottom"></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="customer-container p-2">
-                    <ul class="customer-links">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#modalSearch">
+                <div class="customer-container ml-auto p-2">
+                    <ul class="customer-links list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="#" onclick="myFunction()">
                                 <i class="fa fa-search fa-lg text-white align-text-bottom"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#modalLogin">
+                        <li class="list-inline-item">
+                            <a href="#">
                                 <i class="fa fa-user fa-lg text-white align-text-bottom"></i>
                             </a>
                         </li>
-                        <li>
+                        <li class="list-inline-item">
                             <a href="#">
                                 <i class="fa fa-shopping-cart fa-lg text-white align-text-bottom"></i>
                                 <span class="item-count fa-lg text-white align-text-bottom">0</span>
                             </a>
                         </li>
                     </ul>
+                    <form id="search-bar" action="#">
+                        <input class="selected float-right" type="text" id="search" name="search" placeholder="Search..">
+                    </form>
                 </div>
             </div>
         </div>
@@ -114,7 +98,32 @@
         <div class="footer-copyright text-center py-3">
             © 2021 Copyright Kevin Andrews
         </div>
+        <div class="social-container mr-auto p-2">
+            <ul class="social-links">
+                <li>
+                    <a href="https://facebook.com/" target="_blank">
+                        <i class="fab fa-facebook fa-lg text-white align-text-bottom"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/" target="_blank">
+                        <span class="fab fa-twitter fa-lg text-white align-text-bottom"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/" target="_blank">
+                        <span class="fab fa-youtube fa-lg text-white align-text-bottom"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
+    <script>
+        function myFunction() {
+            var element = document.getElementById("search");
+            element.classList.toggle("mystyle");
+        }
+    </script>
 </body>
 
 </html>
