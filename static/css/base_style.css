@@ -1,17 +1,41 @@
+/* Custom CSS for Global styling */
 html {
     height: 100%;
 }
 
 body {
-    background-color: #0a0717;
+    background-color: #0b0c10;
     font-family: 'Rubik', sans-serif;
+}
+
+h2,h3 {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+hr {
+    border-top: 2px solid #c5c6c7;
 }
 
 .active {
     text-decoration: underline;
 }
 
-/*Custom Code for the Header Section*/
+.btn {
+    width: 85px;
+    background-color: #1f2833;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #66fcf1;
+}
+
+.btn:active {
+    background-color: #45a29e;
+}
+
+/*Custom CSS for the Header Section*/
 .page-header {
     height: 100%;
     font-family: 'Orbitron', sans-serif;
@@ -21,22 +45,51 @@ body {
     cursor: pointer;
 }
 
-.navbar-brand {
+.custom-navbar-brand {
     font-size: 22pt;
+    color: white;
+}
+
+.custom-navbar-brand:hover {
+    text-decoration: none;
+    color: #66fcf1;
+}
+
+.custom-navbar-brand:active {
+    text-decoration: none;
+    color: #45a29e;
 }
 
 .navbar {
     height: 100px;
-    background-color: rgba(100, 100, 100, .4);
+    background-color: #1f2833;
 }
 
-.social-links li{
-    display: inline;
-    list-style-type: none;
+.nav-item a{
+    color: white;
 }
 
-.social-links{
-    padding: 0px;
+.nav-item a:hover{
+    color: #66fcf1;
+    text-decoration: underline;
+}
+
+.nav-item a:active{
+    color: #45a29e;
+}
+
+.dropdown-menu {
+    background-color: #1f2833;
+    border: 2px solid #c5c6c7;
+}
+
+.dropdown-menu a:hover{
+    background-color: #1f2833;
+}
+
+/* Custom CSS for Customer Links */
+.customer-container {
+    width: 350px;
 }
 
 .customer-links {
@@ -56,41 +109,109 @@ body {
     text-decoration: none;
 }
 
-/*Custom Code for search bar*/
+.customer-links i{
+    color: white;
+}
+
+.customer-links i:hover{
+    color: #66fcf1;
+}
+
+.customer-links i:active{
+    color: #45a29e;
+}
+
+/* Custom CSS for search bar */
 .search-toggle-collapse {
     visibility: collapse;
     width: 0;
     padding: 0 10px 0 10px;
     border-radius: 10px;
-    transition: ease-out .1s;
+    transition: ease-in .1s;
 }
 
 .search-toggle {
     visibility: visible;
-    width: 150px;
+    width: 200px;
     padding: 0 10px 0 10px;
     border-radius: 10px;
-    transition: ease-in 1.25s;
+    border: 2px solid #c5c6c7;
+    transition: ease-out .25s;
 }
 
-.customer-container {
-    width: 350px;
+/* Custom CSS for the Card Display */
+.card {
+    border: 2px solid #c5c6c7;
 }
 
-/*Custom Code for the Card Display*/
-.card-display {
-    padding: 0 15px 0 15px;
+.card-body {
+    background-color: #c5c6c7;
 }
 
-/*Custom Code for the Footer Section*/
-.page-footer {
+.btn-add {
+    float: right !important;
+}
+
+/* Custom CSS for Product Page */
+.all-games {
+    margin-bottom: 50px;
+}
+
+.logo-font {
     color: white;
-    height: 100px;
-    background-color: rgba(100, 100, 100, .4);
     font-family: 'Orbitron', sans-serif;
 }
 
-/*Test CSS for mobile menu https://www.codeply.com/go/JPkcW2yWrB*/
+.muted {
+    color: #c5c6c7;
+}
+
+.game-title {
+    font-size: 26pt;
+    color: white;
+}
+
+.game-description {
+    font-size: 12pt;
+    color: white;
+}
+
+.game-price {
+    font-size: 18pt;
+    color: white;
+}
+
+/* Custom CSS for the Footer Section */
+.page-footer {
+    color: white;
+    height: 100px;
+    background-color: #1f2833;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Custom CSS for Social Links */
+.social-links li{
+    display: inline;
+    list-style-type: none;
+}
+
+.social-links{
+    padding: 0px;
+}
+
+.social-links i{
+    color: white;
+}
+
+.social-links i:hover{
+    color: #66fcf1;
+}
+
+.social-links i:active{
+    color: #45a29e;
+}
+
+/* CSS for mobile menu https://www.codeply.com/go/JPkcW2yWrB */
 @media (max-width: 992px) {
     .navbar-collapse {
         position: fixed;
@@ -118,6 +239,27 @@ body {
     .navbar-toggler.collapsed ~ .navbar-collapse {
         transition: left 500ms ease-in-out;
     }
+
+    /* Custom Code for the details and add buttons */
+    .details {
+        padding-left: 5px;
+    }
+
+    .add {
+        padding-right: 5px;
+        float: left !important;
+    }
+}
+
+/* Custom CSS for Card on mobile */
+@media screen and  (max-width: 768px) and (min-width:576px){
+    .add {
+        padding-left: 5px;
+    }
+    .btn-add {
+        padding-left: 5px;
+        float: left !important;
+    }
 }
 
 /* Slightly larger container on xl screens - Code from Boutique Ado project */
@@ -125,4 +267,4 @@ body {
     .container {
       max-width: 80%;
     }
-  }
+}

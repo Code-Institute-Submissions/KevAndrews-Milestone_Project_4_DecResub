@@ -37,17 +37,17 @@
                     <ul class="customer-links list-inline float-right">
                         <li class="list-inline-item">
                             <a href="#" onclick="toggleSearch()">
-                                <i class="fa fa-search fa-lg text-white align-text-bottom"></i>
+                                <i class="fa fa-search fa-lg align-text-bottom"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#">
-                                <i class="fa fa-user fa-lg text-white align-text-bottom"></i>
+                                <i class="fa fa-user fa-lg align-text-bottom"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="{% url 'cart' %}">
-                                <i class="fa fa-shopping-cart fa-lg text-white align-text-bottom"></i>
+                                <i class="fa fa-shopping-cart fa-lg align-text-bottom"></i>
                                 <span class="item-count fa-lg text-white align-text-bottom">0</span>
                             </a>
                         </li>
@@ -59,9 +59,9 @@
             </div>
         </div>
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="/">Gamers Corner</a>
+                <a class="custom-navbar-brand" href="/">Gamers Corner</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -74,7 +74,7 @@
                             <a class="nav-link" href="#" id="all-games-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 All Games
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="all-games-link">
+                            <div class="dropdown-menu" aria-labelledby="all-games-link">
                                 <a href="{% url 'games' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                                 <a href="{% url 'games' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                                 <a href="{% url 'games' %}?sort=name&direction=asc" class="dropdown-item ">By Name</a>
@@ -85,7 +85,7 @@
                             <a class="nav-link" href="#" id="games-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Genre
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="games-link">
+                            <div class="dropdown-menu" aria-labelledby="games-link">
                                 <a href="{% url 'games' %}?category=action" class="dropdown-item">Action</a>
                                 <a href="{% url 'games' %}?category=adventure" class="dropdown-item">Adventure</a>
                                 <a href="{% url 'games' %}?category=fighter" class="dropdown-item">Fighter</a>
@@ -109,37 +109,42 @@
     <div class="message-container"></div>
     {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
-
     {% block content %}
     {% endblock %}
 
     <!--Custom Code for the footer using bootstrap template-->
     <footer class="page-footer font-small pt-4">
-        <div class="footer-copyright text-center py-3">
-            © 2021 Copyright Kevin Andrews
-        </div>
-        <div class="social-container mr-auto p-2">
-            <ul class="social-links">
-                <li>
-                    <a href="https://facebook.com/" target="_blank">
-                        <i class="fab fa-facebook fa-lg text-white align-text-bottom"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/" target="_blank">
-                        <span class="fab fa-twitter fa-lg text-white align-text-bottom"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://youtube.com/" target="_blank">
-                        <span class="fab fa-youtube fa-lg text-white align-text-bottom"></span>
-                    </a>
-                </li>
-            </ul>
+        <div class="container">
+            <div class="row">
+                <div class="footer-copyright text-center col-12">
+                    © 2021 Copyright Kevin Andrews
+                </div>
+            </div>
+            <div class="row">
+                <div class="social-container text-center col-12">
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://facebook.com/" target="_blank">
+                                <i class="fab fa-facebook fa-lg align-text-bottom"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank">
+                                <i class="fab fa-twitter fa-lg align-text-bottom"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com/" target="_blank">
+                                <i class="fab fa-youtube fa-lg align-text-bottom"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!--Custom Code for animating the search bar-->
     <script type="text/javascript">
         function toggleSearch() {
             var search = document.getElementById("search");
