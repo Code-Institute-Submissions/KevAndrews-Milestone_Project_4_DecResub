@@ -2,18 +2,56 @@
 {% load static %}
 
 {% block content %}
-{% for game in games %}
-<div class="row card-display">
-    <div class="card mx-auto mb-4" style="width: 18rem;">
-        <img class="card-img-top" src="{{ game.image.url }}" alt="{{ game.name }}">
-        <div class="card-body">
-            <h5 class="card-title">{{ game.name }}</h5>
-            <p class="card-text">{{ game.description }}</p>
-            <p class="card-text">Price: &euro; {{ game.price }}</p>
-            <a href="#" class="btn btn-primary">Details</a>
-            <a href="#" class="btn btn-primary float-right">Add to Cart</a>
-        </div>
+<div class="container">
+    <div class="row">
+        {% for game in games %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card">
+                    {% if game.image %}
+                        <a href="{% url 'game_detail' game.id %}">
+                            <img class="card-img-top img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
+                        </a>
+                    {% else %}
+                        <a href="{% url 'game_detail' game.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ game.name }}">
+                        </a>
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ game.name }}</h5>
+                        <p class="card-text">Price: &euro; {{ game.price }}</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="#" class="btn btn-primary">Details</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="btn btn-primary float-right">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Code taken from Boutique Ado project -->
+            {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr>
+                </div>
+            {% endif %}                        
+            {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                    <hr>
+                </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                    <hr>
+                </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-5">
+                    <hr>
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
 </div>
-{% endfor %}
 {% endblock %}

@@ -2,7 +2,7 @@
 Class views for the Games / Products
 """
 from django.views import View
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Game
 
 
@@ -26,3 +26,21 @@ class AllGames(View):
         }
 
         return render(request, 'products/games.html', context)
+
+
+class GameDetail(View):
+    """
+    Class view for a Game's details
+    """
+
+    def get(self, request, game_id):
+        """
+        GET method for Game's details page
+        """
+        game = get_object_or_404(Game, pk=game_id)
+
+        context = {
+            'game': game,
+        }
+
+        return render(request, 'products/game_detail.html', context)

@@ -86,3 +86,10 @@ body {
         transition: left 500ms ease-in-out;
     }
 }
+
+/* Slightly larger container on xl screens - Code from Boutique Ado project */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
