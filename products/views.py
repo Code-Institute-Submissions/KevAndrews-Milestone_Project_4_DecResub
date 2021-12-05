@@ -12,13 +12,13 @@ from .models import Game, Category
 
 class AllGames(View):
     """
-    Class view for the All Games page
+    Custom Class view for the All Games page
     """
 
     def get(self, request):
         """
         GET method for the All Games page
-        Used Boutique Ado project for logic and updated it 
+        Used Boutique Ado project for logic and updated it
         to work in this project
         """
         games = Game.objects.all()
@@ -73,12 +73,12 @@ class AllGames(View):
 
 class GameDetail(View):
     """
-    Class view for a Game's details
+    Custom Class view for a Game's details
     """
 
     def get(self, request, game_id):
         """
-        GET method for Game's details page
+        Custom GET method for Game's details page
         """
         game = get_object_or_404(Game, pk=game_id)
 

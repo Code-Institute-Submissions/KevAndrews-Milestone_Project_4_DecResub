@@ -9,12 +9,12 @@ import random
 
 class Index(View):
     """
-    Class view for the Home Index page
+    Custom Class view for the Home Index page
     """
 
     def get(self, request, *args, **kwargs):
         """
-        GET method for the Home Index page
+        Custom GET method for the Home Index page
         """
         games = list(Game.objects.all())
 
