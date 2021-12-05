@@ -45,7 +45,7 @@
                                 <i class="fa fa-user fa-lg align-text-bottom"></i>
                             </a>
                         </li>
-                        <li class="list-inline-item">
+                        <li class="list-inline-item cart">
                             <a href="{% url 'cart' %}">
                                 <i class="fa fa-shopping-cart fa-lg align-text-bottom"></i>
                                 <span class="item-count text-white align-text-top">
@@ -112,7 +112,21 @@
 
     <!--Using the Boutique Ado base.html as a template-->
     {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+        {% for message in messages %}
+            {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                    {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+            {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
 
     {% block content %}
@@ -154,6 +168,13 @@
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
+
+        // Custom Code for hiding toast message
+        $(document).click((event) => {
+            if (!$(event.target).closest('.toast').length) {
+                $('.toast').toast('hide');
+            }        
+        });
 
         // Custom Code for animating the search bar
         function toggleSearch() {
