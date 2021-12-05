@@ -48,7 +48,13 @@
                         <li class="list-inline-item">
                             <a href="{% url 'cart' %}">
                                 <i class="fa fa-shopping-cart fa-lg align-text-bottom"></i>
-                                <span class="item-count fa-lg text-white align-text-bottom">0</span>
+                                <span class="item-count text-white align-text-top">
+                                    {% if grand_total %}
+                                        &euro;{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        &euro; 0.00
+                                    {% endif %}    
+                                </span>
                             </a>
                         </li>
                     </ul>
@@ -144,13 +150,18 @@
         </div>
     </footer>
 
-    <!--Custom Code for animating the search bar-->
+    <!--Using the Boutique Ado base.html as a template-->
+    {% block postloadjs %}
     <script type="text/javascript">
+        $('.toast').toast('show');
+
+        // Custom Code for animating the search bar
         function toggleSearch() {
             var search = document.getElementById("search");
             search.classList.toggle("search-toggle");
         }
     </script>
+    {% endblock %}
 </body>
 
 </html>
