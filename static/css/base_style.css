@@ -17,22 +17,49 @@ hr {
     border-top: 2px solid #c5c6c7;
 }
 
+th, 
+td {
+    color: white;
+}
+
+strong {
+    color: white;  
+}
+
 .active {
     text-decoration: underline;
 }
 
 .btn {
     width: 85px;
-    background-color: #1f2833;
+    background-color: #45a29e;
     color: white;
 }
 
 .btn:hover {
-    background-color: #66fcf1;
+    color: #1f2833;
 }
 
 .btn:active {
-    background-color: #45a29e;
+    background-color: #66fcf1;
+}
+
+.btn-decoration {
+    border: 2px solid #c5c6c7;
+}
+
+.btn-long {
+    width: 150px;
+}
+
+.btn-danger {
+    width: 85px;
+    background-color: firebrick;
+}
+
+input[type=number] {
+    width: 75px !important;
+    padding: 0 15px 0 15px
 }
 
 /*Custom CSS for the Header Section*/
@@ -183,6 +210,19 @@ hr {
     color: white;
 }
 
+/* Custom CSS for Cart Page */
+.game-description-name {
+    font-size: 18pt;
+}
+
+.game-description-content {
+    font-size: 14pt;
+}
+
+.text-green {
+    color: #66fcf1;
+}
+
 /* Custom CSS for the Footer Section */
 .page-footer {
     color: white;
@@ -268,5 +308,17 @@ hr {
 @media (min-width: 1200px) {
     .container {
       max-width: 80%;
+    }
+
+    .btn {
+        width: 80px;
+    }
+
+    .btn-long {
+        width: 150px !important;
+    }
+
+    .add {
+        float: right !important;
     }
 }

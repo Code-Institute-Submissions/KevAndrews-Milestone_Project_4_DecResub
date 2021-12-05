@@ -13,13 +13,13 @@
     // Ensure proper enabling/disabling of all inputs on page load
     var allQtyInputs = $('.qty_input');
     for(var i = 0; i < allQtyInputs.length; i++){
-        var gameId = $(allQtyInputs[i]).data('item_id');
+        var gameId = $(allQtyInputs[i]).data('game_id');
         handleEnableDisable(gameId);
     }
 
     // Check enable/disable every time the input is changed
     $('.qty_input').change(function() {
-        var gameId = $(this).data('item_id');
+        var gameId = $(this).data('game_id');
         handleEnableDisable(gameId);
     });
 
@@ -29,8 +29,12 @@
        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
        var currentValue = parseInt($(closestInput).val());
        $(closestInput).val(currentValue + 1);
-       var gameId = $(this).data('item_id');
-       handleEnableDisable(gameId);
+       var gameId = $(this).data('game_id');
+       // Custom Fix for disabling the plus button
+       if(currentValue >= 98){
+        $(closestInput).val(99);
+        $(this).prop('disabled', true);
+       } 
     });
 
     // Decrement quantity

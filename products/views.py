@@ -26,10 +26,12 @@ class AllGames(View):
         categories = None
         sort = None
         direction = None
+        nav = None
 
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
+            nav = 'all_games'
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 games = games.annotate(lower_name=Lower('name'))
@@ -45,6 +47,7 @@ class AllGames(View):
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
+            nav = 'genre'
             games = games.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
@@ -66,6 +69,7 @@ class AllGames(View):
             'search_term': query,
             'current_categories': categories,
             'current_sorting': current_sorting,
+            'nav': nav
         }
 
         return render(request, 'products/games.html', context)
@@ -84,6 +88,7 @@ class GameDetail(View):
 
         context = {
             'game': game,
+            'nav': 'all_games'
         }
 
         return render(request, 'products/game_detail.html', context)

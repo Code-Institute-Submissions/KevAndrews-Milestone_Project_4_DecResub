@@ -21,7 +21,8 @@ class Index(View):
         feature_games = random.sample(games, 3)
 
         context = {
-            'games': feature_games
+            'games': feature_games,
+            'nav': 'home'
         }
 
         return render(request, 'home/index.html', context)

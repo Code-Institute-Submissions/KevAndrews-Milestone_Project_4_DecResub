@@ -55,33 +55,37 @@
                             <div class="col-6">
                                 <a href="{% url 'game_detail' game.id %}" class="btn">Details</a>
                             </div>
-                            <div class="col-6">
-                                <a href="#" class="btn float-right">Add</a>
-                            </div>
+                            <form class="col-6" action="{% url 'add_to_cart' game.id %}" method="POST">
+                                {% csrf_token %}
+                                    <input type="submit" class="btn text-uppercase float-right" value="Add">
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Code taken from Boutique Ado project -->
-            {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none">
-                    <hr>
-                </div>
-            {% endif %}                        
-            {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none">
-                    <hr>
-                </div>
-            {% endif %}
-            {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none">
-                    <hr>
-                </div>
-            {% endif %}
-            {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block">
-                    <hr>
-                </div>
+            {% if not forloop.last %}
+                <!-- Code taken from Boutique Ado project -->
+                {% if forloop.counter|divisibleby:1 %}
+                    <div class="col-12 d-sm-none">
+                        <hr>
+                    </div>
+                {% endif %}                        
+                {% if forloop.counter|divisibleby:2 %}
+                    <div class="col-12 d-none d-sm-block d-md-block d-lg-none">
+                        <hr>
+                    </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                    <div class="col-12 d-none d-lg-block d-xl-none">
+                        <hr>
+                    </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:4 %}
+                    <div class="col-12 d-none d-xl-block">
+                        <hr>
+                    </div>
+                {% endif %}
             {% endif %}
         {% endfor %}
     </div>

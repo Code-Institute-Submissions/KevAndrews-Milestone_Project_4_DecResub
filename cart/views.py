@@ -2,7 +2,7 @@
 Class views for the Cart
 """
 from django.views import View
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from django.contrib import messages
 from products.models import Game
 
@@ -32,7 +32,12 @@ class AddToCart(View):
         Modified to work with this project
         """
         game = get_object_or_404(Game, pk=game_id)
-        quantity = int(request.POST.get('quantity'))
+
+        if 'quantity' in request.POST:
+            quantity = int(request.POST.get('quantity'))
+        else:
+            quantity = 1
+
         redirect_url = request.POST.get('redirect_url')
 
         cart = request.session.get('cart', {})
@@ -65,11 +70,6 @@ class UpdateCart(View):
         redirect_url = request.POST.get('redirect_url')
 
         cart = request.session.get('cart', {})
-
-        if 'remove_game' in request.POST:
-            print(game_id)
-        else:
-            print('nothing to remove')
 
         if quantity > 0:
             cart[game_id] = quantity

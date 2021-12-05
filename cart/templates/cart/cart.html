@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block content %}
 <section class="cart-section container">
@@ -22,7 +23,7 @@
                     <div class="row">
                         <div class="col">
                             {% include "cart/checkout-buttons.html" %}
-                            <p class="text-muted mb-5">A summary of your cart contents is below</p>
+                            <p class="muted mb-5">A summary of your cart contents is below</p>
                         </div>
                     </div>
                     {% for item in cart_items %}
@@ -35,7 +36,7 @@
                             </div>
                             <div class="col-12 col-sm-6 order-sm-last">
                                 <p class="my-0">Price Each: ${{ item.game.price }}</p>
-                                <p><strong>Subtotal: </strong>${{ item.game.price }}</p>
+                                <p><strong>Subtotal: </strong>${{ item.game.price | calc_subtotal:item.quantity }}</p>
                             </div>
                             <div class="col-12 col-sm-6">
                                 {% include "cart/quantity-form.html" %}
@@ -53,11 +54,12 @@
                     <table class="table table-sm table-borderless">
                         <thead class="text-black">
                             <tr>
-                                <th scope="col">game Info</th>
+                                <th scope="col">Game Info</th>
                                 <th scope="col"></th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Qty</th>
                                 <th scope="col">Subtotal</th>
+                                <th scope="col">&nbsp;</th>
                             </tr>
                         </thead>
 
@@ -70,23 +72,32 @@
                                     {% include "cart/game-description.html" %}
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">${{ item.game.price }}</p>
+                                    <p class="my-0 game-description-content">&euro;{{ item.game.price }}</p>
                                 </td>
                                 <td class="py-3 w-25">
                                     {% include "cart/quantity-form.html" %}
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">${{ item.game.price }}</p>
+                                    <p class="my-0 game-description-content">&euro;{{ item.game.price | calc_subtotal:item.quantity }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <!--<a class="remove-item text-danger" id="remove_{{ item.game_id }}"><small>Remove</small></a>-->
+                                    <a class="remove-item btn btn-danger"
+                                        data-game_id="{{ item.game_id }}" id="remove_{{ item.game_id }}" aria-label="Remove Item">
+                                        <span>
+                                            <i class="fas fa-times fa-lg"></i>
+                                        </span>
+                                    </a>
                                 </td>
                             </tr>
                         {% endfor %}
                         <tr>
-                            <td colspan="5" class="pt-5 text-right">
+                            <td colspan="6" class="pt-5 text-right">
                                 {% include "cart/cart-total.html" %}
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="5" class="text-right">
+                            <td colspan="6" class="text-right">
                                 {% include "cart/checkout-buttons.html" %}
                             </td>
                         </tr>
@@ -94,11 +105,11 @@
                 </div>
             {% else %}
                 <p class="lead mb-5">Your cart is empty.</p>
-                <a href="{% url 'games' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <a href="{% url 'games' %}" class="btn btn-long mb-4">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span class="text-uppercase">Keep Shopping</span>
+                    <span class="text-uppercase">Continue</span>
                 </a>
             {% endif %}
         </div>

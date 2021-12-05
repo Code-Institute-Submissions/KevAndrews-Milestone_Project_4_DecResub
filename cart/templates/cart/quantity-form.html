@@ -3,19 +3,19 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                <button class="decrement-qty btn" 
                     data-game_id="{{ item.game_id }}" id="decrement-qty_{{ item.game_id }}">
                     <span>
                         <i class="fas fa-minus fa-sm"></i>
                     </span>
                 </button>
             </div>
-            <input class="form-control form-control-sm qty_input" type="number"
+            <input class="qty_input" type="number"
                 name="quantity" value="{{ item.quantity }}" min="1" max="99"
                 data-game_id="{{ item.game_id }}"
                 id="id_qty_{{ item.game_id }}">
             <div class="input-group-append">
-                <button class="increment-qty btn btn-sm btn-black rounded-0"
+                <button class="increment-qty btn"
                     data-game_id="{{ item.game_id }}" id="increment-qty_{{ item.game_id }}">
                     <span>
                         <i class="fas fa-plus fa-sm"></i>
@@ -26,5 +26,4 @@
         <input type="hidden" name="redirect_url" value="{{ request.path }}">
     </div>
 </form>
-<a class="update-link text-info"><small>Update</small></a>
-<a class="remove-item text-danger float-right" id="remove_{{ item.game_id }}"><small>Remove</small></a>
+<a class="update-link text-info">Update</a>
