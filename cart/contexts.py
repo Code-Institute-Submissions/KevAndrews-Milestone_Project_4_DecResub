@@ -26,7 +26,7 @@ def cart_contents(request):
             cart_items.append({
                 'game_id': game_id,
                 'quantity': game_data,
-                'product': game,
+                'game': game,
             })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:

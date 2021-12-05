@@ -1,0 +1,6 @@
+  
+{% if item.game.image %}
+<img class="img-fluid rounded" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
+{% else %}
+<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.game.name }}">
+{% endif %}
