@@ -1,9 +1,20 @@
+"""
+Class to handle Order Forms
+"""
 from django import forms
 from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """
+    Used Code from the Boutique Ado project
+    Updated to work with this project
+    """
     class Meta:
+        """
+        Meta Class to add only the fields
+        that are editable
+        """
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',

@@ -1,7 +1,6 @@
 """
 URLs for Checkout App
 """
-
 from django.urls import path
 from checkout.views import Checkout
 
