@@ -1,10 +1,11 @@
 """
 Class views for the Home
 """
+import random
+
 from django.views import View
 from django.shortcuts import render
 from products.models import Game
-import random
 
 
 class Index(View):
@@ -22,7 +23,7 @@ class Index(View):
 
         context = {
             'games': feature_games,
-            'nav': 'home'
+            'nav': 'home',
         }
 
         return render(request, 'home/index.html', context)
