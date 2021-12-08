@@ -2,6 +2,7 @@
 Class views for the Checkout
 """
 
+import json
 import stripe
 
 from django.shortcuts import render, redirect, reverse, get_object_or_404
@@ -54,7 +55,7 @@ class Checkout(View):
         context = {
             'order_form': order_form,
             'stripe_public_key': stripe_public_key,
-            'client_secret': stripe_secret_key
+            'client_secret': intent.client_secret
         }
 
         return render(request, 'checkout/checkout.html', context)
@@ -85,9 +86,7 @@ class Checkout(View):
         order_form = OrderForm(form_data)
 
         if order_form.is_valid():
-            order = order_form.save(commit=False)
-            pid = request.POST.get('client_secret').split('_secret')[0]
-            order.stripe_pid = pid
+            order = order_form.save(commit=False)     
             order.original_bag = json.dumps(cart)
             order.save()
 
