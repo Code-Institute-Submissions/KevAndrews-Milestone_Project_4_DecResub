@@ -13,7 +13,7 @@ class Index(View):
     Custom Class view for the Home Index page
     """
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         """
         Custom GET method for the Home Index page
         """

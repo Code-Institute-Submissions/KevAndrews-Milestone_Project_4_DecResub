@@ -120,6 +120,10 @@ input[type=number] {
     background-color: #1f2833;
 }
 
+.item-count {
+    font-size: 12pt;
+}
+
 /* Custom CSS for Customer Links */
 .customer-container {
     width: 350px;
@@ -281,6 +285,10 @@ input[type=number] {
     height: 2px;
 }
 
+/* Custom CSS for Checkout Success page */
+.checkout-success-section p {
+    color: white;
+}
 
 /* CSS for mobile menu https://www.codeply.com/go/JPkcW2yWrB */
 @media (max-width: 992px) {

@@ -26,7 +26,7 @@ class AllGames(View):
         categories = None
         sort = None
         direction = None
-        nav = None
+        nav = 'all_games'
 
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
