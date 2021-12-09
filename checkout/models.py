@@ -11,6 +11,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from products.models import Game
+from profiles.models import UserProfile
 
 
 class Order(models.Model):
@@ -18,6 +19,8 @@ class Order(models.Model):
     Class to handle the Order
     """
     order_number = models.CharField(max_length=16, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
