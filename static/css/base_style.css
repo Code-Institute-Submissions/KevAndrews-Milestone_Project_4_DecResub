@@ -8,6 +8,12 @@ body {
     font-family: 'Rubik', sans-serif;
     position: relative;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("../../media/bg_img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section {
@@ -87,6 +93,19 @@ label {
 .links:hover {
     color: #45a29e;
 }
+
+.links-dark strong{
+    color: #000;
+}
+
+.links-dark:hover{
+    color: #000;
+}
+
+.add-form {
+    min-width: 150px;
+}
+
 
 /*Custom CSS for the Header Section*/
 .page-header {

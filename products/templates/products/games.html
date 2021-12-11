@@ -50,7 +50,15 @@
                     {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">{{ game.name }}</h5>
-                        <p class="card-text">Price: &euro; {{ game.price }}</p>
+                        <p class="card-text">
+                            Price: &euro; {{ game.price }}
+                            {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a class="links-dark" href="{% url 'edit_game' game.id %}"><strong>Edit</strong></a> | 
+                                <a class="text-danger" href="{% url 'delete_game' game.id %}">Delete</a>
+                            </small>
+                            {% endif %}
+                        </p>
                         <div class="row">
                             <div class="col-6">
                                 <a href="{% url 'game_detail' game.id %}" class="btn">Details</a>
@@ -61,12 +69,7 @@
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>
                         </div>
-                        {% if request.user.is_superuser %}
-                            <small class="ml-3">
-                                <a href="{% url 'edit_game' game.id %}">Edit</a> | 
-                                <a class="text-danger" href="{% url 'delete_game' game.id %}">Delete</a>
-                            </small>
-                        {% endif %}
+                        
                     </div>
                 </div>
             </div>

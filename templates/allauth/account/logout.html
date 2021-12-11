@@ -7,7 +7,7 @@
 <!-- Custom Updated template to match project styles -->
 {% block inner_content %}
 
-<h2 class="logo-font mb-4">{% trans "Sign Out" %}</h2>
+<h2 class="logo-font mb-4 mt-4">{% trans "Sign Out" %}</h2>
 <hr>
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
@@ -17,7 +17,7 @@
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
   {% endif %}
   <a class="btn" href="{% url 'home' %}">Cancel</a>
-  <button class="btn" type="submit">{% trans 'Sign Out' %}</button>
+  <button class="btn btn-long" type="submit">{% trans 'Sign Out' %}</button>
 </form>
 
 
