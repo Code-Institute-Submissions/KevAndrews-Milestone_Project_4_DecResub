@@ -19,8 +19,10 @@ class Index(View):
         """
         games = list(Game.objects.all())
 
-        if not bool(games):
+        if bool(games):
             feature_games = random.sample(games, 3)
+        else:
+            feature_games = list()
 
         context = {
             'games': feature_games,
