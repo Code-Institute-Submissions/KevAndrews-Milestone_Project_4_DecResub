@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.views import View
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Game, Category
+from .forms import GameForm
 
 
 class AllGames(View):
@@ -92,3 +93,28 @@ class GameDetail(View):
         }
 
         return render(request, 'products/game_detail.html', context)
+
+
+def add_game(request):
+    """ Add a game to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = GameForm(request.POST, request.FILES)
+        if form.is_valid():
+            game = form.save()
+            messages.success(request, 'Successfully added game!')
+            return redirect(reverse('game_detail', args=[game.id]))
+        else:
+            messages.error(request, 'Failed to add game. Please ensure the form is valid.')
+    else:
+        form = GameForm()
+        
+    template = 'products/add_game.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
