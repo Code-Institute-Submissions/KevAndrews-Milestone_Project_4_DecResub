@@ -6,6 +6,12 @@ html {
 body {
     background-color: #0b0c10;
     font-family: 'Rubik', sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+section {
+    padding-bottom: 100px;
 }
 
 h2,h3 {
@@ -64,6 +70,18 @@ input[type=number] {
 
 .remove-item-mobile {
     visibility: collapse;
+}
+
+label {
+    color: white;
+}
+
+.links {
+    color: #66fcf1;
+}
+
+.links:hover {
+    color: #45a29e;
 }
 
 /*Custom CSS for the Header Section*/
@@ -233,8 +251,11 @@ input[type=number] {
 
 /* Custom CSS for the Footer Section */
 .page-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px; 
     color: white;
-    height: 100px;
     background-color: #1f2833;
     font-family: 'Orbitron', sans-serif;
 }
