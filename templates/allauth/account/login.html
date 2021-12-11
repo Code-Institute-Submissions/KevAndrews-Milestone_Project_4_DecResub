@@ -11,7 +11,7 @@
 <h2 class="logo-font mt-4">{% trans "Sign In" %}</h2>
 <hr>
 
-<p class="text-white">{% blocktrans %}If you have not created an account yet, then please
+<p>{% blocktrans %}If you have not created an account yet, then please
   <a class="links" href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 
 <form class="login" method="POST" action="{% url 'account_login' %}">

@@ -4,10 +4,18 @@
 
 {% block head_title %}{% trans "Sign Up Closed" %}{% endblock %}
 
+<!-- Custom Updated template to match project styles -->
 {% block inner_content %}
-<hr>
-<h2 class="logo-font mb-4">{% trans "Sign Up Closed" %}</h2>
+
+<h2 class="logo-font mt-4">{% trans "Sign Up Closed" %}</h2>
 <hr>
 
 <p>{% trans "We are sorry, but the sign up is currently closed." %}</p>
+
+<a class="btn" href="{% url 'account_login' %}">
+    <span class="icon">
+        <i class="fas fa-chevron-left"></i>
+    </span>
+    Back
+</a>
 {% endblock %}

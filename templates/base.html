@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base_style.css' %}">
     {% block extra_css %}
+    
     {% endblock %}
     <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -35,51 +36,7 @@
     <!--Custom Code for the header using bootstrap template-->
     <header class="page-header">
         <!-- Top Links -->
-        <div class="top-links container">
-            <div class="d-flex">
-                <div class="customer-container ml-auto p-2">
-                    <ul class="customer-links list-inline float-right">
-                        <li class="list-inline-item">
-                            <a href="#" onclick="toggleSearch()">
-                                <i class="fa fa-search fa-lg align-text-bottom"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-user fa-lg align-text-bottom"></i>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="login">
-                                {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_game' %}" class="dropdown-item">Product Management</a>
-                                {% endif %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                {% endif %}
-                            </div>
-                        </li>
-                        <li class="list-inline-item cart">
-                            <a href="{% url 'cart' %}">
-                                <i class="fa fa-shopping-cart fa-lg align-text-bottom"></i>
-                                <span class="item-count text-white align-text-top">
-                                    {% if grand_total %}
-                                        &euro;{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        &euro; 0.00
-                                    {% endif %}    
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <form class="search-form" method="GET" action="{% url 'games' %}">
-                        <input class="search-toggle-collapse float-right" type="text" id="search" name="search" placeholder="Search...">
-                    </form>
-                </div>
-            </div>
-        </div>
+        {% include 'includes/top-links.html' %}
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg">
             <div class="container">
@@ -87,41 +44,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="main-nav">
-                    <ul class="navbar-nav mb-2 mb-lg-0 ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link {% if nav == 'home' %} active {% endif %}" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link {% if nav == 'all_games' %} active {% endif %}" href="#" id="all-games-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                All Games
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="all-games-link">
-                                <a href="{% url 'games' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                                <a href="{% url 'games' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                                <a href="{% url 'games' %}?sort=name&direction=asc" class="dropdown-item ">By Name</a>
-                                <a href="{% url 'games' %}" class="dropdown-item">All Games</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link {% if nav == 'genre' %} active {% endif %}" href="#" id="games-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Genre
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="games-link">
-                                <a href="{% url 'games' %}?category=action" class="dropdown-item">Action</a>
-                                <a href="{% url 'games' %}?category=adventure" class="dropdown-item">Adventure</a>
-                                <a href="{% url 'games' %}?category=fighter" class="dropdown-item">Fighter</a>
-                                <a href="{% url 'games' %}?category=fps" class="dropdown-item">First Person Shooters</a>
-                                <a href="{% url 'games' %}?category=horror" class="dropdown-item">Horror</a>
-                                <a href="{% url 'games' %}?category=platformer" class="dropdown-item">Platformer</a>
-                                <a href="{% url 'games' %}?category=puzzel" class="dropdown-item">Puzzel</a>
-                                <a href="{% url 'games' %}?category=sports" class="dropdown-item">Sports</a>
-                                <a href="{% url 'games' %}?category=rpg" class="dropdown-item">Role-Playing Games</a>
-                                <a href="{% url 'games' %}" class="dropdown-item">All Genres</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                {% include 'includes/main-nav.html' %}
             </div>
         </nav>
     </header>

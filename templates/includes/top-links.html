@@ -1,0 +1,45 @@
+<div class="top-links container">
+    <div class="d-flex">
+        <div class="customer-container ml-auto p-2">
+            <ul class="customer-links list-inline float-right">
+                <li class="list-inline-item">
+                    <a href="#" onclick="toggleSearch()">
+                        <i class="fa fa-search fa-lg align-text-bottom"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user fa-lg align-text-bottom"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="login">
+                        {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                            <a href="{% url 'add_game' %}" class="dropdown-item dropdown-link">Product Management</a>
+                        {% endif %}
+                            <a href="{% url 'profile' %}" class="dropdown-item dropdown-link">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item dropdown-link">Logout</a>
+                        {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item dropdown-link">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item dropdown-link">Login</a>
+                        {% endif %}
+                    </div>
+                </li>
+                <li class="list-inline-item cart">
+                    <a href="{% url 'cart' %}">
+                        <i class="fa fa-shopping-cart fa-lg align-text-bottom"></i>
+                        <span class="item-count text-white align-text-top">
+                            {% if grand_total %}
+                                &euro;{{ grand_total|floatformat:2 }}
+                            {% else %}
+                                &euro; 0.00
+                            {% endif %}    
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <form class="search-form" method="GET" action="{% url 'games' %}">
+                <input class="search-toggle-collapse float-right" type="text" id="search" name="search" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</div>
