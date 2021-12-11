@@ -17,12 +17,12 @@ class Index(View):
         """
         Custom GET method for the Home Index page
         """
-        games = list(Game.objects.all())
+        #games = list(Game.objects.all())
 
-        feature_games = random.sample(games, 3)
+       # feature_games = random.sample(games, 3)
 
         context = {
-            'games': feature_games,
+            #'games': feature_games,
             'nav': 'home',
         }
 
