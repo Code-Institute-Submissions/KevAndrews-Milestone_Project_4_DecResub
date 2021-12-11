@@ -95,6 +95,7 @@ class GameDetail(View):
         return render(request, 'products/game_detail.html', context)
 
 
+@login_required
 def add_game(request):
     """ Add a game to the store """
     if not request.user.is_superuser:
@@ -120,6 +121,7 @@ def add_game(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_game(request, game_id):
     """ Edit a game in the store """
     if not request.user.is_superuser:
@@ -148,6 +150,7 @@ def edit_game(request, game_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_game(request, game_id):
     """ Delete a game from the store """
     if not request.user.is_superuser:
