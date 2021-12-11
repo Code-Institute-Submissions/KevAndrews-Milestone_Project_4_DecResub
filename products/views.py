@@ -118,3 +118,49 @@ def add_game(request):
     }
 
     return render(request, template, context)
+
+
+def edit_game(request, game_id):
+    """ Edit a game in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    game = get_object_or_404(Game, pk=game_id)
+    if request.method == 'POST':
+        form = GameForm(request.POST, request.FILES, instance=game)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated game!')
+            return redirect(reverse('game_detail', args=[game.id]))
+        else:
+            messages.error(request, 'Failed to update game. Please ensure the form is valid.')
+    else:
+        form = GameForm(instance=game)
+        messages.info(request, f'You are editing {game.name}')
+
+    template = 'products/edit_game.html'
+    context = {
+        'form': form,
+        'game': game,
+    }
+
+    return render(request, template, context)
+
+
+def delete_game(request, game_id):
+    """ Delete a game from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    game = get_object_or_404(Game, pk=game_id)
+    game.delete()
+    messages.success(request, 'Game deleted!')
+    return redirect(reverse('games'))
+    """ Delete a Game in the store """
+    game = get_object_or_404(Game, pk=game_id)
+    game.delete()
+    messages.success(request, 'Game deleted!')
+
+    return redirect(reverse('games'))

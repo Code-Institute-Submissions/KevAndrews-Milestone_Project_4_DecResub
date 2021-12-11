@@ -61,6 +61,12 @@
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>
                         </div>
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_game' game.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_game' game.id %}">Delete</a>
+                            </small>
+                        {% endif %}
                     </div>
                 </div>
             </div>
