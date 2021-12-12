@@ -16,7 +16,12 @@ class Cart(View):
         """
         Custom GET method for the Cart page
         """
-        return render(request, 'cart/cart.html')
+        categories = list(Category.objects.all())
+
+        context = {
+            'categories': categories
+        }
+        return render(request, 'cart/cart.html', context)
 
 
 class AddToCart(View):

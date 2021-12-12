@@ -4,12 +4,12 @@
     "model": "products.game",
     "fields": {
       "sku": "gg0001",
-      "name": "Product_1",
-      "description": "First product in a long line",
-      "price": 29.81,
+      "name": "Name",
+      "description": "Description",
+      "price": 45.45,
       "category": 1,
-      "image_url": "{{ MEDIA_URL }}media/noimage.png",
-      "image": "noimage.png"
+      "image_url": "/media/noimage.png",
+      "image": null
     }
   },
   {
@@ -17,12 +17,12 @@
     "model": "products.game",
     "fields": {
       "sku": "gg0002",
-      "name": "Product_2",
-      "description": "Second product in a long line",
-      "price": 33.27,
-      "category": 2,
-      "image_url": "{{ MEDIA_URL }}media/noimage.png",
-      "image": "noimage.png"
+      "name": "Among Us",
+      "description": "Among Us is a multiplayer game for four to fifteen players although recommended for at least five. Up to three players are randomly and secretly chosen to be the Impostor(s) each round. As of 2021 a round can take place on one of four maps: a spaceship called The Skeld; a headquarters building called MIRA HQ; a planet base called Polus; or an airship based on Innersloth\u0027s Henry Stickmin series called The Airship. The Impostor(s) win(s) one of two ways: either by killing most of the crew (to the point that they\u0027re equal in number) or by sabotaging a critical system on the map (provided the Crewmates don\u0027t resolve it in time). The Crewmates likewise can win one of two ways: either by completing all tasks or by identifying and ejecting all Impostors.",
+      "price": 19.28,
+      "category": 1,
+      "image_url": "/media/noimage.png",
+      "image": null
     }
   },
   {
@@ -30,12 +30,12 @@
     "model": "products.game",
     "fields": {
       "sku": "gg0003",
-      "name": "Product_3",
-      "description": "Third product in a long line",
-      "price": 11.70,
-      "category": 3,
-      "image_url": "{{ MEDIA_URL }}media/noimage.png",
-      "image": "noimage.png"
+      "name": "Back 4 Blood",
+      "description": "In the game\u0027s primary player versus environment game modes players join a four person team of post-apocalypse survivors called Cleaners who must fight their way through levels populated by zombie-like monsters called The Ridden. Teammates are either controlled by other players or AI bots depending on matchmaking preferences and player availability. A new feature of Back 4 Blood is cards. At the start of each level players need to build their deck with cards that adjust various elements of gameplay such as modifying the player\u0027s health damage and stamina. Along with player cards the AI Director will also use Corruption cards against the player to hinder their progress. The AI can spawn extra enemies activate a fog effect and increase the size of the horde. The game features pre-defined hero characters who have preset attributes and abilities and players can purchase upgrades and items with an in-game currency called Copper.",
+      "price": 36.89,
+      "category": 1,
+      "image_url": "/media/noimage.png",
+      "image": null
     }
   },
   {
@@ -43,12 +43,12 @@
     "model": "products.game",
     "fields": {
       "sku": "gg0004",
-      "name": "Product_4",
-      "description": "Fourth product in a long line",
-      "price": 15.63,
-      "category": 4,
-      "image_url": "{{ MEDIA_URL }}media/noimage.png",
-      "image": "noimage.png"
+      "name": "Call of Duty Black Ops Cold War",
+      "description": "Call of Duty: Black Ops Cold War is set during the Cold War in the early 1980s. The story follows Green Beret turned CIA SAD/SOG operative Russell Adler and his mission to stop a USSR extremist group in 1981. The story is inspired by actual events and the campaign features locations such as East Berlin Vietnam Turkey and the Soviet KGB headquarters. Adler is supported by Call of Duty: Black Ops characters Mason Woods and Hudson. With new characters being Adler\u0027s MACV-SOG friend Sims Mossad fixer Lazar and MI6 officer Park. Players assume a custom character for the campaign codenamed \u201CBell\u201D with the ability to choose their intelligence agency skin tone nationality and gender; as well as different personality traits that provide in-game perks. The campaign features multiple endings dependent on player choice throughout the campaign.",
+      "price": 13.52,
+      "category": 1,
+      "image_url": "/media/noimage.png",
+      "image": null
     }
   },
   {
@@ -56,12 +56,740 @@
     "model": "products.game",
     "fields": {
       "sku": "gg0005",
-      "name": "Product_5",
-      "description": "Fifth product in a long line",
-      "price": 47.57,
+      "name": "Call of Duty Vanguard",
+      "description": "Vanguard\u0027s campaign features similar gameplay mechanics previously introduced in Modern Warfare such as the player being able to mount wielded weapons to flat surfaces interact with doors and execute takedowns. New gameplay features allow the player the ability to use a more advanced tactical approach in combat such as blind firing from behind cover breaking through destructible environmental elements or creating new paths to complete objectives by climbing walls.",
+      "price": 11.08,
+      "category": 1,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg0006",
+      "name": "Chivalry 2",
+      "description": "Chivalry 2 is an action game played from either first-person or third-person perspective. In the game players are equipped with various medieval melee weapons such as sledgehammers long swords and battle axes though they can also use bows and arrows. New weapons can be found in weapon caches in a map. Players have three basic melee attack patterns: horizontal slash vertical slash and a stab which can be chained together. Players also need to block hostile attacks and with the right timing they can stagger their opponents and parry their attacks. Players must be aware of how they swing their weapons as friendly fire may occur following an unplanned strike.",
+      "price": 33.62,
+      "category": 4,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg0007",
+      "name": "Dead by Daylight",
+      "description": "A group of four survivors must elude one killer bent on sacrificing them on hooks to The Entity an almighty malevolent being. The survivors\u0027 perspectives are third-person while the killer\u0027s perspective is first-person. The survivors can only fight back by stunning the killer or using items such as flashlights to blind the killer. Survivors can also vault over obstacles much faster than the killer therefore providing a means of escape. Survivors use these obstacles and tools to help them elude the killer for as long as they can. In order to escape survivors must repair five generators scattered across the map to power up the exit gates. They must then open the exit gates and leave the area or find an escape hatch to jump into. Repairing can be made quicker with items such as toolboxes.",
+      "price": 37.25,
       "category": 5,
-      "image_url": "{{ MEDIA_URL }}media/noimage.png",
-      "image": "noimage.png"
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg0008",
+      "name": "Farming Simulator",
+      "description": "In career mode players takes on the roles of farmers. Their tasks depend on expanding and upgrading dated equipment and machinery which can be achieved by harvesting and selling crops. Players are free to explore the surrounding areas of the map grow from their choice of several crops and invest their money in additional fields and equipment. They can also raise livestock or earn an income from forestry. There are dynamically generated missions that consist of the player performing various tasks within a time frame such as mowing grass fertilizing fields or delivering cargo. The player is rewarded with money once the task is finished plus a bonus based on how quickly the task was completed",
+      "price": 41.51,
+      "category": 6,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg0009",
+      "name": "Final Fantasy XIV: A Realm Reborn",
+      "description": "Final Fantasy XIV is an MMORPG and features a persistent world in which players can interact with each other and the environment. Players create and customize their characters for use in the game including name race gender facial features and starting class. Unlike in the original release players may only choose to be a Disciple of War or Magic as a starting class",
+      "price": 12.79,
+      "category": 7,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00010",
+      "name": "Genshin Impact",
+      "description": "Genshin Impact is an open-world action role-playing game that allows the player to control one of four interchangeable characters in a party. Switching between characters can be done quickly during combat allowing the player to use several different combinations of skills and attacks. Characters may have their strengths enhanced in various ways such as increasing a character\u0027s level and improving artifacts and the weapons that the character equips. In addition to exploration the player can attempt various challenges for rewards. ",
+      "price": 28.19,
+      "category": 8,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00011",
+      "name": "Hood: Outlaws and Legends",
+      "description": "Hood: Outlaws \u0026 Legends is a multiplayer action video game played from a third-person perspective. The player assumes control of an outlaw who must infiltrate a keep of an authoritarian power named the State and compete against a rival team to steal the treasure hidden in the keep\u0027s vault. The player can form a group of four in order to pull off the heist which has three phases. The first phase requires the player to steal the key from the Sheriff of Nottingham a boss character in the game. Once the player acquires the key they are given clues regarding the location of the vault though the opponent team would also be notified. Stealth is essential as guards may call for reinforcements and close off certain areas blocking access to the vault. ",
+      "price": 33.21,
+      "category": 9,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00012",
+      "name": "Knockout City",
+      "description": "Knockout City is a team-based competitive multiplayer video game whose gameplay rules resemble dodgeball. The player\u0027s goal is to attack enemies from the opposing team by knocking them out with a ball. There are several types of balls in the game including the Moon Ball which allows the player holding the ball to jump higher and the Bomb Ball which is a time bomb that explodes on impact. A player can also throw another player as a ball. When ready to throw a ball the player targets and locks on to an enemy; holding down the throw button charges up the ball for a faster shot that can be more difficult to catch. A successful throw depends not on the accuracy or the precision of the throw but on the player\u0027s positioning and strategy. Players can dodge or catch a ball that is thrown at them and they will respawn after getting hit by a ball twice. The player can also fake throw a ball and tackle an opponent holding a ball.",
+      "price": 23.37,
+      "category": 9,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00013",
+      "name": "Minecraft",
+      "description": "Minecraft is a 3D sandbox game that has no required goals to accomplish allowing players a large amount of freedom in choosing how to play the game. However there is an achievement system known as advancements in the Java Edition of the game and trophies on the PlayStation ports. Gameplay is in the first-person perspective by default but players have the option for third-person perspective. The game world is composed of rough 3D objects\u2014mainly cubes and fluids and commonly called blocks\u2014representing various materials such as dirt stone ores tree trunks water and lava. The core gameplay revolves around picking up and placing these objects. These blocks are arranged in a 3D grid while players can move freely around the world. Players can mine blocks and then place them elsewhere enabling them to build things.",
+      "price": 44.28,
+      "category": 10,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00014",
+      "name": "Minecraft Dungeons",
+      "description": "Unlike Minecraft Minecraft Dungeons does not feature an open world nor mining or building. Instead it is a point-and-click hack and slash-styled dungeon crawler rendered from an isometric perspective. Players explore procedurally generated and hand crafted dungeons filled with randomly-generated monsters and also deal with traps puzzles bosses and finding treasure. There is no class system; players can use any weapon or armor they wish. The game includes a four-player local and online multiplayer",
+      "price": 31.13,
+      "category": 11,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00015",
+      "name": "MLB The Show 21",
+      "description": "MLB The Show 21 is a baseball video game. Matt Vasgersian Mark DeRosa and Dan Plesac return as play-by-play commentators Heidi Watney as sideline reporter and Alex Miniak as public address commentator. New to the series is the ballpark creator feature which gives players the ability to change ballpark dimensions wall height foul territory and other scenery options. This feature also allows players to share and download ballparks that other players have created online. It was exclusive to the ninth generation versions of the game.",
+      "price": 48.44,
+      "category": 12,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00016",
+      "name": "Need for Speed Heat",
+      "description": "Need for Speed Heat is a racing game set in an open world environment called Palm City a fictionalised version of Miami Florida and its surrounding area. The in-game map features diverse geography including mountainous areas and open fields. Unlike Need for Speed Payback the game does not include a 24-hour day-night cycle but players can switch between day and night. During the day players can take part in sanctioned race events which reward players with cash to spend on new cars and upgrades. During the night players can take part in illicit street racing which rewards REP. Racing during the night will attract the attention of a rogue police task force that patrols the streets of Palm City. They\u0027re tasked with shutting down street racing in Palm City which can lead players to risk their earned rep against the police or lose their earnings in handcuffs. Pursuits in Palm City can take place during day or night but the PCPD\u0027s response to a pursuit differs depending on the time period. Players earn rep from participating in pursuits with great amounts offered during night than day. ",
+      "price": 28.82,
+      "category": 13,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00017",
+      "name": "No Man\u2019s Sky",
+      "description": "No Man\u0027s Sky is an action-adventure survival game played from a first or third person perspective that allows players to engage in four principal activities: exploration survival combat and trading. The player takes the role of a specimen of alien humanoid planetary explorer known in-game as the Traveller in an uncharted universe. They start on a random planet near a crashed spacecraft at the edge of the galaxy and are equipped with a survival exosuit with a jetpack and a multitool that can be used to scan mine and collect resources as well as to attack or defend oneself from creatures and hostile forces. The player can collect repair and refuel the craft allowing them to travel about the planet between other planets and space stations in the local planetary system engage in space combat with alien factions or make hyperspace jumps to other star systems. While the game is open ended the player may follow the guidance of the entity known as the Atlas to head towards the centre of the galaxy",
+      "price": 36.42,
+      "category": 14,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00018",
+      "name": "Overwatch",
+      "description": "Overwatch is an online team-based game generally played as a first-person shooter. The game features several different game modes principally designed around squad-based combat with two opposing teams of six players each. Players select one of over two dozen pre-made hero characters from one of three class types: Damage heroes that deal most of the damage to attack or defend control points Tank heroes that can absorb a large amount of damage and Support heroes that provide healing or other buffs for their teammates.",
+      "price": 27.39,
+      "category": 3,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00019",
+      "name": "Power Rangers Battle for the Grid",
+      "description": "Power Rangers: Battle for the Grid is a fighting game in which players compete in battle using characters with different fighting styles and special attacks. Players select teams of three characters to engage in one-on-one combat and can choose to switch between them at any point during the match as well as call teammates to perform assists. Players can also call on Megazords to assist with the battle via a meter that fills as their team members take damage. When all three opposing teammates have been eliminated a victory is declared.",
+      "price": 38.26,
+      "category": 15,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00020",
+      "name": "Quake",
+      "description": "In Quake\u0027s single-player mode players explore levels facing monsters and finding secret areas before reaching an exit. Switches or keys open doors and reaching the exit takes the player to the next level. Before accessing an episode there is a set of three pathways with easy medium and hard skill levels. The fourth skill level Nightmare was so bad that it was hidden so people won\u0027t wander in by accident; the player must drop through water before the episode four entrance and go into a secret passage to access it.",
+      "price": 37.21,
+      "category": 3,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00021",
+      "name": "Riders Republic",
+      "description": "The four main activities available in the game include mountain biking skiing snowboarding and wingsuit flying. Ubisoft described the game as a massively multiplayer sports game as up to 64 players can compete against each other in Mass Races competitions. In addition players can also play a 6v6 competitive multiplayer mode named Tricks Battle Arena. In this mode each team competes in an arena and needs to perform as many tricks as possible in order to score Trick points. The team which has the highest score would win the match. The game is set in an open world which meshes seven distinct national parks in the Western United States namely Bryce Canyon Yosemite Valley Sequoia Park Zion Canyonlands Mammoth Mountain and Grand Teton into one enormous single map. The game features social hubs in which players can meet and interact with each other.",
+      "price": 23.7,
+      "category": 16,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00022",
+      "name": "Rocket League",
+      "description": "Rocket League\u0027s gameplay is largely the same as that of its predecessor Supersonic Acrobatic Rocket-Powered Battle-Cars. Players control a rocket-powered car and use it to hit a ball that is much larger than the cars towards the other team\u0027s goal area to score goals in a way that resembles indoor soccer with elements reminiscent of a demolition derby. Players\u0027 cars have the ability to jump to hit the ball while in mid-air. The players can also pick up a speed boost by passing their cars over marked spaces on the field enabling them to quickly cross the field use the added momentum to hit the ball or ram into another player\u0027s car to destroy it; in the latter case the destroyed car respawns moments later on their team\u0027s side of the field. A player may also use a boost when in the air to propel themselves forward in flight allowing players to hit the ball in the air. Players can alter their car\u0027s orientation while midair which combined with midair boosting allows for controlled flight. Players can also perform quick dodges causing their car to do a short jump and spin in a given direction which can be used to nudge the ball or gain positioning advantage over the other team. Matches are usually five minutes long with a sudden death overtime if the game is tied at that point. Matches can be played from between one-on-one up to four-on-four players as well as in casual and ranked playlists.",
+      "price": 28.13,
+      "category": 12,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00023",
+      "name": "Hello Neighbor",
+      "description": "In Hello Neighbor the player finds themselves moving into a new house across the street from a mysterious neighbor who is behaving in a paranoid manner and seems to be keeping a secret in his basement. The player\u0027s task is to break into the neighbor\u0027s home and solve a series of puzzles to gather the items needed to unlock and access his basement. As the player explores the neighbor\u0027s house they must not be spotted by the mysterious neighbor or they will be chased down and if the player is not quick enough to hide or escape captured. The player can stun the neighbor by throwing objects at him for an easier escape. If the player is caught (or suffers a serious injury) they will be sent back to their own house and will have to break in again. Upon starting again the player must be more careful as the neighbor will deduce movements from the last attempt to set up traps. However the player can use the game settings to turn on friendly neighbor mode preventing the neighbor from setting these traps and causing him to be less aggressive in his pursuits. However he is still to be avoided at all costs",
+      "price": 32.6,
+      "category": 17,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00024",
+      "name": "Star Wars Squadrons",
+      "description": "Star Wars: Squadrons is a space combat game played from a first-person perspective. Players take control of starfighters from either the Galactic Empire or the New Republic navy. In these ships they can utilise the movement of power between the ship\u0027s functions of weaponry shields and engines to defeat their opponents in combat. Imperial starfighters do not have shields resulting in other additions to their class so that the two teams would be balanced. As players earn more experience they can unlock new weapons shields upgrades and various cosmetic items for the pilot and their ship. Completing Daily Challenges and Operation Challenges will also give players Glory which can be spent on purchasing cosmetic unlocks. Players can check the ship\u0027s status shields and powers by viewing the instruments in the ship\u0027s cockpit",
+      "price": 15.49,
+      "category": 18,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00025",
+      "name": "Super Animal Royale",
+      "description": "Super Animal Royale is a 2D top-down third-person battle royale shooter where up to 64 players compete to be the last person standing using a variety of weapons. Players create a character from one of several Super Animals including different breeds and colors of various species which are unlocked by collecting animal DNA awarded after each match. Experience points are granted based on the player\u0027s performance at the end of each game which allow them to level up and gain access to new potential species. Cosmetic items can also be obtained that can be used to customize an animal\u0027s appearance such as shirts hats mustaches and glasses. After joining a lobby players mingle in a non-combat area until the match begins with non-player bots joining the queue if less than 64 human players are present a few seconds before the start of the game.",
+      "price": 27.96,
+      "category": 19,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00026",
+      "name": "Super Bomberman R Online",
+      "description": "Players move through a two-dimensional grid environment and must trap and drop bombs to defeat their opponents. The game features story mode spanning 50 stages and supports cooperative gameplay for two players. The game also features an eight-player competitive multiplayer mode. The online mode contains a league system (Baby A/B Novice A/B Amateur A/B Pro A/B Champ A/B and God A/B). Battle mode includes 19 battlegrounds in total. Besides the classic arena it also offers a multi-level arena with springboards ice-patterns moveable blocks etc. each with a unique style. In addition to the eight Bomberman Bros. and the Five Dastardly Bombers Super Bomberman R also features a selection of new characters based on Konami Originals such as Dracula Bomber Vic Viper Bomber Goemon Bomber and more. In total there are 27 characters each with special abilities.",
+      "price": 49.98,
+      "category": 20,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00027",
+      "name": "Super Mega Baseball 2",
+      "description": "Super Mega Baseball 2 supports 1 - 4 players in local co-op or online multiplayer. Primary game modes include Exhibition Season Elimination and Pennant Race. Pennant Race is the 1v1 online matchmaking mode while the remaining modes can be played locally or online in arranged games. Super Mega Baseball 2 also has three DLC packs containing additional customization content: Wild Team Customization Pack Wicked Team Customization Pack Bold Player Customization Pack. In season mode it has deep multi-season tracking of stats.",
+      "price": 49.08,
+      "category": 12,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00028",
+      "name": "Super Mega Baseball 3",
+      "description": "Super Mega Baseball 3 features Exhibition Pennant Race Season and Elimination modes as well as a brand-new Franchise mode. The Franchise mode includes such features as signing free agents and Player Development. In a post-launch update Metalhead also released a brand-new cross-platform online mode for Super Mega Baseball 3 called Online Leagues.The mode was released on September 29 and allows users to create and join custom leagues online with friends. Leagues can range from casual to competitive play and each league can have up to 32 players.",
+      "price": 40.02,
+      "category": 12,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00029",
+      "name": "World War Z",
+      "description": "The game is a co-operative third-person shooter in which four players fight against massive hordes of zombies in 5 locations including: New York Jerusalem Moscow Tokyo and Marseille. Players can choose from seven classes: the Gunslinger (specializes in range) the Hellraiser (specializes in explosives) the Fixer (engineer) the Medic (healer) the Slasher (specializes in melee) the Exterminator (specializes in crowd control) and the Dronemaster (specializes in offensive/defensive drones). New perks can be unlocked for each class as players continue progressing in the game. The game can support up to 1000 enemies appearing on-screen simultaneously and they can climb onto each other to reach players on a higher level. Players can collect different items in the battlefield but their locations are procedurally generated. In addition to fighting zombies players also need to complete different objectives such as escorting survivors in each location.",
+      "price": 35.27,
+      "category": 21,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00030",
+      "name": "WWE 2k Battlegrounds",
+      "description": "WWE 2K Battlegrounds is a professional wrestling video game. Battlegrounds is more of a fast-paced arcade-style fighting game than the more realistic main entries to the WWE 2K series. Its fighting style has been compared to WWE All Stars (2011)",
+      "price": 40.16,
+      "category": 12,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00031",
+      "name": "Before Your Eyes",
+      "description": "The player controls the recently deceased Benjamin Brynn on his way to the afterlife. The player must interact with Brynn\u0027s memories through eye-tracking technology to progress through the game. The player\u0027s eye movements and blinking is registered by the game as blinking is the player\u0027s main way of interacting with the game including moving time forward an indeterminate amount of time in Brynn\u0027s life. This narrative structure was inspired by the 1949 stage play Death of a Salesman which portrays the story partly through the protagonist\u0027s memories. The player can instead opt to play with a mouse instead of a webcam as clicking will perform the same actions as blinking.",
+      "price": 39.51,
+      "category": 22,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00032",
+      "name": "Deathloop",
+      "description": "In Deathloop the player takes on the role of Colt an assassin stuck in a time loop who has been tasked to take out eight targets called Visionaries across the island before midnight as leaving even one alive will cause the time loop to reset and undo his work. Further should Colt die before taking out the eight targets he will wake back up at the start of the loop. The player uses a combination of stealth parkour attack skills guns gadgets and powers as in Arkane\u0027s previous Dishonored and Prey games to move about the game world. They must avoid or take out guards learn the patterns of Colt\u0027s targets and to figure out the right order to eliminate said targets using guns melee attacks or other environmental means.",
+      "price": 40.86,
+      "category": 3,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 33,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00033",
+      "name": "The Forgotten City",
+      "description": "The story of The Forgotten City explores the existential relationship between humanity and its laws. The game begins with the protagonist waking after being rescued from floating down the Tiber River by a woman named Karen. Karen asks them to look for her friend Al Worth who disappeared whilst investigating some nearby ruins. As the player explores said ruins they are sent towards the era of the Roman Empire towards the now-restored city. As the plot progresses and the player continues exploring it\u0027s elaborated that the city is under the conditional protection of the gods where if anyone is to commit sin all citizens of the city would be equally punished and turned into gold in a system referred to as the Golden Rule (originally Dwarves\u0027 Law).These gold statues depicting previous inhabitants and residents can be heard by seemingly only the player whispering towards them. The specific sins that are criteria for the Golden Rule to be enacted are not clear to any resident of the city with numerous records of contradictions. The player is able to re-enter the portal they had entered from and restart the time loop if the Golden Rule is ever enacted allowing them to keep both physical and mental objects such as important items and information.",
+      "price": 25.41,
+      "category": 22,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 34,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00034",
+      "name": "Halo Infinite",
+      "description": "Halo Infinite is a shooter with most gameplay taking place from a first-person perspective that includes a number of weapons and vehicles commonly found in the Halo series (e.g. the Warthog). It features several types of abilities for player character the Master Chief such as the Grapple Shot and Thruster which enables him to pull himself towards foes or retrieve items.The title\u0027s campaign mode features a semi-open world structure; players can freely explore parts of the setting the ringworld Zeta Halo which are segmented off from each other and initially impassable. There are also more linear environments within the ring\u0027s surface. Scattered throughout the environment are Forward Operating Bases which can be cleared of enemies and captured. Captured bases serve as fast-travel points and earn the player Valor which is used to call in new weapons and vehicles.",
+      "price": 22.01,
+      "category": 3,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 35,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00035",
+      "name": "Hitman 3",
+      "description": "Hitman 3 is a stealth game played from a third-person perspective and players once again assume control of assassin Agent 47. In the game 47 travels to various locations and carries out contracted assassinations continuing the story of the last two games. The base game features six new locations: Dubai Dartmoor Berlin Chongqing Mendoza and an epilogue set in the Carpathian Mountains Romania. Owners of Hitman or Hitman 2 are able to import maps levels and their progress into Hitman 3.",
+      "price": 27.59,
+      "category": 23,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 36,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00036",
+      "name": "It Takes Two",
+      "description": "It Takes Two is an action-adventure video game with elements from platform games. It is specifically designed for split-screen cooperative multiplayer which means that it must be played with another player through either local or online play. The game features a large number of game mechanics from various video game genres. These gameplay mechanics are connected to the story and the theme of the level. For instance in one level Cody gains the ability to rewind time whereas May can replicate herself. Players have to cooperate with each other and utilize these abilities in order to progress. The game also features a large number of minigames.",
+      "price": 40.64,
+      "category": 24,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 37,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00037",
+      "name": "Metroid Dread",
+      "description": "Metroid Dread is an action-adventure game in which players control bounty hunter Samus Aran as she explores the planet ZDR. It retains the side-scrolling gameplay of previous Metroid games alongside the free aim and melee attacks added in Samus Returns (2017). As the player explores they discover new items and weapons allowing them to access new areas. Dread adds stealth elements with Samus avoiding the EMMI robots in certain areas by hiding reducing her noise and using the Phantom Cloak camouflage that makes her invisible but slows her movement. If an EMMI catches Samus the player has two brief chances to perform melee counters and escape. If they fail Samus is killed. EMMIs can only be destroyed when Samus obtains the temporary Omega Blaster upgrade which is lost upon using it to destroy one; however destroying an EMMI grants Samus a new permanent upgrade. Players unlock images in an in-game gallery based on their completion time difficulty level and percentage of items collected.",
+      "price": 24.02,
+      "category": 25,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 38,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00038",
+      "name": "Psychonauts 2",
+      "description": "Psychonauts 2 is a third-person platform game similar in gameplay to its predecessor. The player controls Raz a newly graduated Psychonaut with powerful psychic abilities as he delves into the minds of others. The player uses Psi-Powers such as telekinesis pyrokinesis and levitation in combination with more common platform game elements to explore the mental worlds of several non-player characters.",
+      "price": 22.24,
+      "category": 26,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 39,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00039",
+      "name": "Resident Evil Village",
+      "description": "esident Evil Village uses a first-person perspective. It is set in a snowy explorable Eastern European village described as pulled straight from the Victorian era and much larger and immersive than its predecessor. Structures and buildings in the central village can be climbed and used to fight enemies. Compared to Biohazard the game is more action-focused with protagonist Ethan Winters now equipped with more combat skills due to military training. The game\u0027s primary enemies the werewolf-like Lycans are not only agile and intelligent but can wield weapons and attack in packs forcing the player to rethink their strategy on whether to utilize sparse ammunition use melee combat or simply run away.",
+      "price": 27.83,
+      "category": 5,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 40,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00040",
+      "name": "Returnal",
+      "description": "Returnal is a third-person shooter video game featuring roguelike elements and covering the psychological horror genre. Set in a futuristic science fiction setting the player controls Selene (Jane Perry) a space pilot equipped with a suit and armed with high-tech weapons who is stranded on the alien planet Atropos and stuck in a time loop. After every death Selene is resurrected following a pattern of traversing across foreign environments and combating extraterrestrial entities with growing visions in an ever changing world.",
+      "price": 40.53,
+      "category": 1,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 41,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00041",
+      "name": "Valheim",
+      "description": "Valheim is an open-world survival game played from a third-person perspective. As fallen Vikings players must craft tools build shelters and fight enemies to survive. The game uses distinctive low-resolution stylized 3D graphics with a combat system inspired by action games. Co-operative gameplay with up to ten people and optional PvP gameplay is also supported. To survive players must gather natural resources found throughout the world either through foraging hunting mining or farming. These resources are used to build shelters make tools and equipment and forge weapons. The main objective of the game is to kill the five bosses located in different biomes of the game. To summon each boss players must travel to each boss\u0027 altar and give a specific item as an offering. Bosses will drop a collectable trophy when killed; this trophy can be placed at a central altar to grant each player a special power-up. Power-ups can be used infinitely but the player needs to wait for a brief period between uses",
+      "price": 34.33,
+      "category": 10,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 42,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00042",
+      "name": "Cyberpunk 2077",
+      "description": "Cyberpunk 2077 is played in a first-person perspective as V a mercenary whose voice face hairstyles body type and modifications background and clothing are customisable. Stat categories\u2014Body Intelligence Reflexes Technical and Cool\u2014are influenced by the character classes that players assume which are NetRunner (hacking) Techie (machinery) and Solo (combat). V must consult a ripperdoc to upgrade and purchase cyberware implants; black markets offer military-grade abilities. The rarity of any given equipment is shown by a coloured tier system. V can take cover aim run jump double jump and slide. Melee strikes can be dealt with close-combat weapons. There are three types of ranged weapons all of which can be customised and modified\u2014Power (standard) Tech (which penetrate walls and enemies) and Smart (with homing bullets). Ranged weapons are equipped to ricochet bullets in a target\u0027s direction and slow them down in bullet time. Four types of damage can be inflicted and resisted\u2014Physical Thermal EMP and Chemical. Weapon use increases accuracy and reloading speed which are manifested in character animations. Gunsmiths repair and upgrade weapons. The game can be completed without killing anyone with non-lethal options for weapons and cyberware.",
+      "price": 46.5,
+      "category": 1,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 43,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00043",
+      "name": "Satisfactory",
+      "description": "The player takes the role of an engineer who has been sent to the planet with orders to colonize it by building a factory complex for FICSIT. The player has a choice of four starting locations: the Grasslands the Rocky Desert the Dune Desert or the Northern Forest. This choice affects the resources the player has access to in the early game and the amount of flat land available for easy building. However the player can move to any other part of the map at any time. After landing the player must salvage the landing pod for parts with which to construct the Hub the main location from which most other construction will extend.During a brief tutorial the player learns how to mine and process basic ores such as iron and copper. With these materials it is possible to construct a simple factory and to begin exploring the Tier system. As of May 2021 there are eight such tiers in the game each of which grants access to increasingly complex and sophisticated materials and equipment. Exploration and combat are secondary gameplay elements. The player must fight hostile alien life forms and conquer hazardous environments in order to find valuable resources in the wilderness. A limited number of weapons and vehicles are available to make exploration easier.",
+      "price": 32.64,
+      "category": 29,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 44,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00044",
+      "name": "Control",
+      "description": "Control is played from a third-person perspective and is built using Remedy\u0027s proprietary Northlight Engine which was first used on the company\u0027s previous title Quantum Break. Control is set within the Oldest House a featureless Brutalist skyscraper in New York City and the headquarters of the fictional Federal Bureau of Control (FBC) which studies Altered World Events (AWEs) and collects and studies Objects of Power from these AWEs within. The Oldest House itself an Object of Power has an interior far larger than its exterior an enormous constantly shifting supernatural realm that defies the laws of spacetime. At the onset of the game an entity called the Hiss is attempting to cross over through a dimensional barrier into this reality and has taken over numerous parts of the Oldest House reconfiguring its architecture to its needs as well as many of the FBC employees to fight for it. The player controls Jesse Faden who has come to the Oldest House seeking answers about her brother after a prior AWE but becomes involved in the fight against the Hiss.",
+      "price": 25.32,
+      "category": 30,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 45,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00045",
+      "name": "Star Wars Jedi: Fallen Order",
+      "description": "Star Wars Jedi: Fallen Order is an action-adventure video game played from a third-person perspective. It adopts the Metroidvania style of exploration and progression. Players control Cal Kestis and have access to a lightsaber and the Force which are used in both combat and puzzle scenarios. Enemy types range from Imperial stormtroopers droids and Purge Troopers who have been trained specifically to battle Jedi to wild beasts and skilled Zabrak warriors that are native to each planet Cal explores. The game\u0027s bosses include Inquisitors who also wield lightsabers and the Force bounty hunters hired to hunt down Cal large vehicles such as AT-STs and wild beasts like the Oggdo Bogdo and the Gorgara.",
+      "price": 35.8,
+      "category": 31,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 46,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00046",
+      "name": "The Outer Worlds",
+      "description": "The Outer Worlds is an action role-playing video game featuring a first-person perspective. In the early stages of the game the player can create their own character and unlock a ship which acts as the game\u0027s central hub space. Though the player cannot control their ship directly it serves as a fast travel point to access different areas in the game and acts as the player\u0027s persistent inventory space. The player can encounter and recruit non-player characters as companions who have their own personal missions and stories. ",
+      "price": 45.67,
+      "category": 28,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 47,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00047",
+      "name": "Human Fall Flat",
+      "description": "Human: Fall Flat is a physics puzzle game where players play a customizable human referred to in-game as Bob. Bob is stated to have no superhuman abilities; he is purely human. Players can make him grab objects and climb up ledges using both his arms and looking with his head. Although Bob\u0027s standard appearance is a featureless minimalist all-white human with a baseball cap players are able to customize him to their liking painting his body in a different array of colors and dressing him in a variety of costumes.The game is open-ended. Each level is themed differently each containing multiple solutions to their unique puzzles. Various remotes hidden in the game give players clues to learn the gameplay and ultimately solve the puzzles.",
+      "price": 15.56,
+      "category": 32,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 48,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00048",
+      "name": "Subnautica",
+      "description": "Subnautica is a survival action-adventure game set in an open world environment and played from a first-person perspective. The player controls the lone survivor named Ryley Robinson of a waylaid spacecraft called the Aurora stranded on a remote ocean planet named 4546B. The main objective is to explore the ocean and survive its dangers while completing tasks to advance the plot. Players can collect resources construct tools bases and submersibles and interact with the planet\u0027s wildlife.",
+      "price": 47.79,
+      "category": 14,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 49,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00049",
+      "name": "Alien Isolation",
+      "description": "Alien: Isolation is a single-player action-adventure game with emphasis on stealth and survival horror features. The player controls Amanda Ripley from a first-person perspective and must explore a space station and complete objectives while avoiding outsmarting and defeating enemies. Objectives range from activating computers to collecting certain items or reaching a specific area in the game. The player can run climb ladders sneak into vents crouch behind objects to break the line of sight with enemies and peek over or lean around to gain view. The player also has the ability to go under tables or inside lockers to hide from enemies.",
+      "price": 28.31,
+      "category": 33,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 50,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00050",
+      "name": "Halo The Master Chief Collection",
+      "description": "The Master Chief Collection originally consisted of Halo: Combat Evolved Anniversary Halo 2 Anniversary Halo 3 and Halo 4 complete with their full catalog of extras including all multiplayer maps and gameplay modes. There have been no story or gameplay changes to the original releases. The games are first-person shooters with vehicular combat that takes place from a third-person perspective. Each campaign has four difficulty levels and access to gameplay modifiers known as Skulls.",
+      "price": 21.23,
+      "category": 3,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 51,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00051",
+      "name": "Ace Combat 7 SKIES UNKNOWN",
+      "description": "Ace Combat 7: Skies Unknown forgoes a realistic flight model in favor of faster arcade-like gameplay to increase its accessibility to newer players. The player can also choose Novice or Expert control settings; the latter enables the player to execute realistic aircraft maneuvers such as rolls and high-g turns. The game features 28 different aircraft with an additional nine as downloadable content and the F-4E Phantom II offered as a pre-order bonus. As with previous entries in the series most of the aircraft are licensed from the real-world although a set of fictional superplanes are also included. Several aircraft in the game make their series debut such as various members of the Su-30 family as well as upgraded versions of older aircraft like the Gripen E and A-10C Thunderbolt II.",
+      "price": 37.58,
+      "category": 1,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 52,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00052",
+      "name": "Conan Exiles",
+      "description": "The most basic premise of Conan Exiles is survival in the fictional prehistoric Hyborian Age. Player characters begin convicted of various crimes sentenced to death and are crucified under the scorching desert sun. The player character is rescued by Conan and as an exile must navigate the Exiled Lands a harsh desert landscape. A later update added a biome called the Frozen North which added elements to build armors and a land to explore. It also added Star metal which is used to build strong armor and better tools and weapons. An additional biome The Highlands was added in 2017. A high-level Volcano area followed in Q2 2018 in the northernmost region of the game map. This newest addition added Obsidian used to create powerful tools and weapons rivaling their Star Metal counterparts. Three additional biomes (The Savannah The Floodlands and The Ashlands) were added into the game with the release of the Isle of Siptah expansion DLC in Q1 2021.",
+      "price": 32.74,
+      "category": 14,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 53,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00053",
+      "name": "Doom Eternal ",
+      "description": "Players once again take on the role of the Doom Slayer who battles the demonic forces of Hell from a first-person perspective. The game continues its predecessor\u0027s emphasis on push-forward combat encouraging the player to aggressively engage enemies in order to acquire health ammo and armor. The player has access to various firearms such as the Combat Shotgun Super Shotgun Heavy Cannon Rocket Launcher Plasma Rifle Chaingun BFG 9000 and Ballista. Melee weapons such as a chainsaw the Crucible Blade energy sword the Sentinel Argent Hammer and a retractable arm-blade called the Doomblade can also be used. The arm-blade provides the opportunity for a larger variety of quick and violent glory kill executions which drop extra health. The Super Shotgun is now equipped with the Meat Hook a ranged accessory which grabs on to enemies and slingshots the player towards them functioning as a grappling hook useful both in combat scenarios and environmental navigation. The Doom Slayer\u0027s armor now includes a shoulder-mounted Equipment Launcher with the ability to lob grenades and ice bombs. In addition there is the Flame Belch a flamethrower that sets enemies on fire with it to drop armor pickups. Finally killing enemies with the chainsaw will drop ammunition. New movement mechanics such as wall-climbing dash moves and horizontal bars to swing from have also been introduced. Like its predecessor Doom Eternal invites the player to develop simple tactics. As the game gets harder the player needs to use the advantages of fight arenas and their bonuses in more strategic ways. They also need to decide which enemy has to be killed first and how to move on the battlefield.",
+      "price": 28.8,
+      "category": 3,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 54,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00054",
+      "name": "Superhot VR",
+      "description": "Superhot sets the player in a minimalistic environment taking out hostile attackers that are trying to kill them. Weapons picked up by the player have limited ammunition and break easily requiring the player to rely on defeating enemies to attain new weapons or making melee kills. Taking a single hit from an enemy bullet kills the player requiring them to restart the level. Though the game mechanics are typical of most shooters time only progresses normally when the player moves or fires a gun otherwise time is slowed; this is described in the game\u0027s tagline Time Moves Only When You Move. This gives the player the opportunity to alter their actions as to avoid the path of bullets or to better assess their current situation.",
+      "price": 11.81,
+      "category": 3,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 55,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00055",
+      "name": "Red Dead Redemption II",
+      "description": "Red Dead Redemption 2 is a Western-themed action-adventure game. Played from a first or third-person perspective the game is set in an open-world environment featuring a fictionalized version of the Western Midwestern and Southern United States in 1899 during the latter half of the Wild West era and the turn of the twentieth century. The game features both single-player and online multiplayer components the latter released under Red Dead Online. For most of the game the player controls outlaw Arthur Morgan a member of the Van der Linde gang as he completes numerous missions\u2014linear scenarios with set objectives\u2014to progress through the story; from the game\u0027s epilogue the player controls John Marston the playable protagonist of the game\u0027s predecessor Red Dead Redemption. Outside of missions the player may freely roam the game\u0027s interactive world. The player may engage in combat with enemies using melee attacks firearms throwables or explosives. Combat has been refined from the game\u0027s predecessor and notable new mechanics consist of dual-wielding and the ability to use a bow. The player is granted the ability to swim as Arthur but not as John\u2014a reference to the previous game where swimming led to instant death.",
+      "price": 11.86,
+      "category": 31,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 56,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00056",
+      "name": "Hellblade Senua\u0027s Sacrifice",
+      "description": "Hellblade: Senua\u0027s Sacrifice is divided in two types of gameplay: the first allows Senua to walk freely and interact with her surroundings. Those parts focus on either story via voiceover as Senua travels from one location to another or the resolution of a puzzle or challenge of some kind to progress further. She can use a capacity known as focus in reference to her tendency to see things differently from other people due to her condition to trigger puzzle-related events. If she uses her focus on totems hidden throughout the game it triggers a memory via voice-over of her friend Druth telling her of the stories of the Norsemen; activating all forty-four of them triggers a bonus cutscene shortly before the game\u0027s climax that extends on Druth\u0027s backstory. Several areas feature their own exclusive mechanics or trials such as reaching a safe zone in time before Senua dies or using the focus ability to modify the structure of her surroundings. In addition Hellblade features fights against malformed representations of Norsemen who block her progression including occasional bosses.",
+      "price": 16.14,
+      "category": 1,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 57,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00057",
+      "name": "Mordhau ",
+      "description": "In Mordhau players engage in hand-to-hand combat with medieval weapons such as swords spears shields hammers bows siege weapons and more. When in close-quarters combat players can defeat their opponents by utilizing techniques like directional strikes stabbing kicking dodging blocking and parrying while watching their health and stamina bars. Players may also ride horses in battle. The game can be played in either first person perspective or third person perspective.",
+      "price": 25.5,
+      "category": 1,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 58,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00058",
+      "name": "Hell Let Loose",
+      "description": "Matches are 50 vs. 50 combined arms battles between two teams of Germans and Americans and more recently since the full release of the game Soviets. Each consists of multiple smaller rifle squads of six soldiers armoured squads of three soldiers or recon squads of two soldiers. As of October 2019 two game modes exist in the game: Warfare and Offensive. In both modes the map is divided into sectors that each team seeks to capture and control. In the Warfare mode the game is won by either controlling all sectors at a given point in time or by controlling a majority of them when the timer runs out essentially functioning as capture the flag. In the Offensive mode a defending team is in control of all sectors at the beginning of the match and the objective for the opposing side is then to capture all of them before the timer runs out.",
+      "price": 20.21,
+      "category": 3,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 59,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00059",
+      "name": "Dirt Rally 2.0",
+      "description": "Dirt Rally 2.0 is focused on rallying and rallycross. Players compete in timed stage events on tarmac and off-road terrain in varying weather conditions. The game features stages in Argentina Australia New Zealand Poland Spain and the United States. Codemasters also announced plans to expand the game through the release of downloadable content and released stages in Finland Germany Greece Monte Carlo Sweden and Wales. These stages are remastered versions of the stages included in the original Dirt Rally. There is also a rallycross mode with World RallyCross Supercars (including the lineup of the 2018 season) and eight circuits from the FIA World Rallycross Championship. Dirt Rally 2.0 lets players choose between a total of fifty cars including the aforementioned World Rallycross Supercars historic rally cars from the 1960s through the 1980s Groups A B and R rally cars and modern rally cars from the 1990s to the late 2010s. This was later expanded to thirteen locations through downloadable content.",
+      "price": 24.38,
+      "category": 37,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 60,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00060",
+      "name": "Death Stranding",
+      "description": "Death Stranding is an action game set in an open world and includes asynchronous online functions. The player controls Sam Bridges a porter for a company known as BRIDGES. The player is tasked with delivering supply cargo to various isolated cities known as KNOTs as well as isolated researchers and survivalists while also connecting them to a communications system known as the Chiral Network. The player is evaluated by the company and recipients based on their performance (including via likes similar to social networks) including whether the cargo was delivered and if it is intact among other factors. These merits are in turn used to level up the player\u0027s statistics such as stability and weight capacity and increase their standing with individual locations and characters (which can improve rewards). How cargo is packed by the player and the overall weight being carried affect Sam\u0027s ability to navigate through the environments.",
+      "price": 40.92,
+      "category": 9,
+      "image_url": "/media/noimage.png",
+      "image": null
+    }
+  },
+  {
+    "pk": 61,
+    "model": "products.game",
+    "fields": {
+      "sku": "gg00061",
+      "name": "Middle-earth Shadow of War",
+      "description": "Middle-earth: Shadow of War is an action role-playing game set in an open world environment and played from a third-person perspective like its predecessor. The player controls the game\u0027s protagonist Talion who has several natural athletic and combat abilities as a ranger of Gondor but also has unique abilities provided by the wraith of the elf lord Celebrimbor with whom he shares his body. The player uses their combined abilities to complete various missions typically aimed to disrupt the armies of Sauron. The game includes main quests that drive the game\u0027s narrative and numerous optional quests that can help the player boost Talion\u0027s abilities and Followers via the game\u0027s Nemesis System. In contrast to the previous game which was more of a hack and slash the game has an action role-playing approach creating a more personalized experience for each player. It features a dynamic weather system as well as day-night cycle which affects the gameplay and enemy behavior.",
+      "price": 23.36,
+      "category": 38,
+      "image_url": "/media/noimage.png",
+      "image": null
     }
   }
 ]

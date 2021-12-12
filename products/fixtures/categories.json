@@ -1,74 +1,306 @@
 [
   {
-      "pk": 1,
-      "model": "products.category",
-      "fields": {
-          "name": "action",
-          "friendly_name": "Action"
-      }
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+      "name": "Category",
+      "friendly_name": "Category"
+    }
   },
   {
-      "pk": 2,
-      "model": "products.category",
-      "fields": {
-          "name": "fps",
-          "friendly_name": "FPS"
-      }
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "Social deduction game",
+      "friendly_name": "Social deduction game"
+    }
   },
   {
-      "pk": 3,
-      "model": "products.category",
-      "fields": {
-          "name": "rpg",
-          "friendly_name": "RPG"
-      }
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "First-person shooter",
+      "friendly_name": "First-person shooter"
+    }
   },
   {
-      "pk": 4,
-      "model": "products.category",
-      "fields": {
-          "name": "sports",
-          "friendly_name": "Sports"
-      }
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+      "name": "Hack and slash",
+      "friendly_name": "Hack and slash"
+    }
   },
   {
-      "pk": 5,
-      "model": "products.category",
-      "fields": {
-          "name": "horror",
-          "friendly_name": "Horror"
-      }
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+      "name": "Survival horror",
+      "friendly_name": "Survival horror"
+    }
   },
   {
-      "pk": 6,
-      "model": "products.category",
-      "fields": {
-          "name": "platformer",
-          "friendly_name": "Platformer"
-      }
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+      "name": "Simulation",
+      "friendly_name": "Simulation"
+    }
   },
   {
-      "pk": 7,
-      "model": "products.category",
-      "fields": {
-          "name": "adventure",
-          "friendly_name": "Adventure"
-      }
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+      "name": "Multiplayer online role-playing game",
+      "friendly_name": "Multiplayer online role-playing game"
+    }
   },
   {
-      "pk": 8,
-      "model": "products.category",
-      "fields": {
-          "name": "fighter",
-          "friendly_name": "Fighter"
-      }
+    "pk": 8,
+    "model": "products.category",
+    "fields": {
+      "name": "Action role playing game",
+      "friendly_name": "Action role playing game"
+    }
   },
   {
-      "pk": 9,
-      "model": "products.category",
-      "fields": {
-          "name": "puzzel",
-          "friendly_name": "Puzzel"
-      }
+    "pk": 9,
+    "model": "products.category",
+    "fields": {
+      "name": "Action",
+      "friendly_name": "Action"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.category",
+    "fields": {
+      "name": "Sandbox survival",
+      "friendly_name": "Sandbox survival"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.category",
+    "fields": {
+      "name": "Dungeon crawler",
+      "friendly_name": "Dungeon crawler"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.category",
+    "fields": {
+      "name": "Sports",
+      "friendly_name": "Sports"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.category",
+    "fields": {
+      "name": "Racing",
+      "friendly_name": "Racing"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.category",
+    "fields": {
+      "name": "Action-adventure survival",
+      "friendly_name": "Action-adventure survival"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.category",
+    "fields": {
+      "name": "Fighting",
+      "friendly_name": "Fighting"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.category",
+    "fields": {
+      "name": "Sports racing",
+      "friendly_name": "Sports racing"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.category",
+    "fields": {
+      "name": "Stealth survival horror",
+      "friendly_name": "Stealth survival horror"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.category",
+    "fields": {
+      "name": "Space combat",
+      "friendly_name": "Space combat"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.category",
+    "fields": {
+      "name": "Battle royale",
+      "friendly_name": "Battle royale"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.category",
+    "fields": {
+      "name": "Action maze",
+      "friendly_name": "Action maze"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.category",
+    "fields": {
+      "name": "Third-person shooter first-person shooter",
+      "friendly_name": "Third-person shooter first-person shooter"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.category",
+    "fields": {
+      "name": "Adventure",
+      "friendly_name": "Adventure"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.category",
+    "fields": {
+      "name": "Stealth",
+      "friendly_name": "Stealth"
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.category",
+    "fields": {
+      "name": "Action-adventure platform",
+      "friendly_name": "Action-adventure platform"
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.category",
+    "fields": {
+      "name": "Action-adventure",
+      "friendly_name": "Action-adventure"
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.category",
+    "fields": {
+      "name": "Platform",
+      "friendly_name": "Platform"
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.category",
+    "fields": {
+      "name": "Third-person shooter roguelike",
+      "friendly_name": "Third-person shooter roguelike"
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.category",
+    "fields": {
+      "name": "Action role-playing",
+      "friendly_name": "Action role-playing"
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.category",
+    "fields": {
+      "name": "Factory simulation Sandbox",
+      "friendly_name": "Factory simulation Sandbox"
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.category",
+    "fields": {
+      "name": "Third-person shooter action-adventure",
+      "friendly_name": "Third-person shooter action-adventure"
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.category",
+    "fields": {
+      "name": "Action adventure",
+      "friendly_name": "Action adventure"
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.category",
+    "fields": {
+      "name": "Puzzle-platform",
+      "friendly_name": "Puzzle-platform"
+    }
+  },
+  {
+    "pk": 33,
+    "model": "products.category",
+    "fields": {
+      "name": "Action-adventure stealth survival horror",
+      "friendly_name": "Action-adventure stealth survival horror"
+    }
+  },
+  {
+    "pk": 34,
+    "model": "products.category",
+    "fields": {
+      "name": "Air combat simulation",
+      "friendly_name": "Air combat simulation"
+    }
+  },
+  {
+    "pk": 35,
+    "model": "products.category",
+    "fields": {
+      "name": "Action-adventure hack and slash",
+      "friendly_name": "Action-adventure hack and slash"
+    }
+  },
+  {
+    "pk": 36,
+    "model": "products.category",
+    "fields": {
+      "name": "Fighting hack \u0027n\u0027 slash",
+      "friendly_name": "Fighting hack \u0027n\u0027 slash"
+    }
+  },
+  {
+    "pk": 37,
+    "model": "products.category",
+    "fields": {
+      "name": "Racing simulation",
+      "friendly_name": "Racing simulation"
+    }
+  },
+  {
+    "pk": 38,
+    "model": "products.category",
+    "fields": {
+      "name": "Action role-playing hack and slash",
+      "friendly_name": "Action role-playing hack and slash"
+    }
   }
 ]

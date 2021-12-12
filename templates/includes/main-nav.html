@@ -19,15 +19,9 @@
                 Genre
             </a>
             <div class="dropdown-menu" aria-labelledby="games-link">
-                <a href="{% url 'games' %}?category=action" class="dropdown-item">Action</a>
-                <a href="{% url 'games' %}?category=adventure" class="dropdown-item">Adventure</a>
-                <a href="{% url 'games' %}?category=fighter" class="dropdown-item">Fighter</a>
-                <a href="{% url 'games' %}?category=fps" class="dropdown-item">First Person Shooters</a>
-                <a href="{% url 'games' %}?category=horror" class="dropdown-item">Horror</a>
-                <a href="{% url 'games' %}?category=platformer" class="dropdown-item">Platformer</a>
-                <a href="{% url 'games' %}?category=puzzel" class="dropdown-item">Puzzel</a>
-                <a href="{% url 'games' %}?category=sports" class="dropdown-item">Sports</a>
-                <a href="{% url 'games' %}?category=rpg" class="dropdown-item">Role-Playing Games</a>
+                {% for category in categories %}
+                    <a href="{% url 'games' %}?category={{ category.name }}" class="dropdown-item">{{ category.friendly_name }}</a> 
+                {% endfor %}
                 <a href="{% url 'games' %}" class="dropdown-item">All Genres</a>
             </div>
         </li>

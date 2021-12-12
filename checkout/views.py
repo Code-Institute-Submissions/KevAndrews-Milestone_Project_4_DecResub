@@ -35,6 +35,8 @@ class Checkout(View):
         stripe_public_key = settings.STRIPE_PUBLIC_KEY
         stripe_secret_key = settings.STRIPE_SECRET_KEY
 
+        categories = list(Category.objects.all())
+
         cart = request.session.get('cart', {})
         if not cart:
             messages.error(
@@ -76,6 +78,7 @@ class Checkout(View):
 
         context = {
             'order_form': order_form,
+            'categories': categories,
             'stripe_public_key': stripe_public_key,
             'client_secret': intent.client_secret
         }

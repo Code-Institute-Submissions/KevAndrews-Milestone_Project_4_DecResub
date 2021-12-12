@@ -44,6 +44,7 @@ class Profile(View):
 
         form = UserProfileForm(request.POST, instance=profile_user)
 
+        #Custom Code to remove Profiles
         if 'delete_profile' in request.POST:
             request.user.delete()
             request.session.delete()

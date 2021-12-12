@@ -68,6 +68,7 @@ class AllGames(View):
         context = {
             'games': games,
             'search_term': query,
+            'categories': categories,
             'current_categories': categories,
             'current_sorting': current_sorting,
             'nav': nav
@@ -87,8 +88,11 @@ class GameDetail(View):
         """
         game = get_object_or_404(Game, pk=game_id)
 
+        categories = list(Category.objects.all())
+
         context = {
             'game': game,
+            'categories': categories,
             'nav': 'all_games'
         }
 

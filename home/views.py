@@ -5,7 +5,7 @@ import random
 
 from django.views import View
 from django.shortcuts import render
-from products.models import Game
+from products.models import Game, Category
 
 
 class Index(View):
@@ -19,6 +19,8 @@ class Index(View):
         """
         games = list(Game.objects.all())
 
+        categories = list(Category.objects.all())
+
         if bool(games):
             feature_games = random.sample(games, 3)
         else:
@@ -26,6 +28,7 @@ class Index(View):
 
         context = {
             'games': feature_games,
+            'categories': categories,
             'nav': 'home',
         }
 
