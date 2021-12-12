@@ -14,7 +14,7 @@ from django.views import View
 from django.conf import settings
 
 from cart.contexts import cart_contents
-from products.models import Game
+from products.models import Game, Category
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from profiles.forms import UserProfileForm

@@ -4,7 +4,7 @@ Class views for the Cart
 from django.views import View
 from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from django.contrib import messages
-from products.models import Game
+from products.models import Game, Category
 
 
 class Cart(View):
