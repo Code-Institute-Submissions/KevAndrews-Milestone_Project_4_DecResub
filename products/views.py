@@ -68,7 +68,7 @@ class AllGames(View):
         context = {
             'games': games,
             'search_term': query,
-            'categories': categories,
+            'categories': list(Category.objects.all()),
             'current_categories': categories,
             'current_sorting': current_sorting,
             'nav': nav
