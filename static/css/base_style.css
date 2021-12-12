@@ -41,10 +41,6 @@ strong {
     color: white;  
 }
 
-.img-bg {
-    background-color: white;
-}
-
 .active {
     text-decoration: underline;
 }
@@ -251,6 +247,10 @@ label {
 .card-text,
 .card-title { 
     color: #1f2833;
+}
+
+.card-img {
+    max-height: 350px;
 }
 
 .btn-add {
