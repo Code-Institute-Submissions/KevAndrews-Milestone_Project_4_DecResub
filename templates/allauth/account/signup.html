@@ -13,19 +13,21 @@
 <p class="text-white">{% blocktrans %}Already have an account? Then please <a class="links" href="{{ login_url }}">sign
     in</a>.{% endblocktrans %}</p>
 
-<form class="signup mb-4" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form|crispy }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <a class="btn" href="{% url 'account_login' %}">
-    <span class="icon">
-      <i class="fas fa-chevron-left"></i>
-    </span>
-    Back
-  </a>
-  <button class="btn btn-long" type="submit">{% trans "Sign Up" %}</button>
-</form>
-
+<!-- Added section div to push the footer to the bottom on mobile screens -->
+<section class="sign-up">
+  <form class="signup mb-4" id="signup_form" method="post" action="{% url 'account_signup' %}">
+    {% csrf_token %}
+    {{ form|crispy }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <a class="btn" href="{% url 'account_login' %}">
+      <span class="icon">
+        <i class="fas fa-chevron-left"></i>
+      </span>
+      Back
+    </a>
+    <button class="btn btn-long" type="submit">{% trans "Sign Up" %}</button>
+  </form>
+</section>
 {% endblock %}

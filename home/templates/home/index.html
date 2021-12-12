@@ -5,14 +5,18 @@
 <!--Custom Code for the index page-->
 <section class="page-section container">
     <div class="jumbotron mt-4">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-            featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <h1 class="display-4 text-center text-white">Welcome to Gamer's Corner</h1>
+        <hr class="my-4 w-25">
+        <p class="lead text-center">
+            Here at Gamers Corner we strive to bring you the best games at the lowest prices.<br>
+            You can browse our featured games or search through our catalog of games by using the links above or selecting the search icon at the top of the screen
         </p>
+        <hr class="my-4 w-25">
+        {% if not request.user.is_authenticated %}
+            <p class="lead text-center">
+                <a class="btn btn-long" href="{% url 'account_signup' %}" role="button">Register</a>
+            </p>
+        {% endif %}
     </div>
     <div class="feature-title">
         <h2>Featured Games</h2>
