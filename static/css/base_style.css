@@ -41,6 +41,10 @@ strong {
     color: white;  
 }
 
+.img-bg {
+    background-color: white;
+}
+
 .active {
     text-decoration: underline;
 }
