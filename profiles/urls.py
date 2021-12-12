@@ -1,7 +1,12 @@
+"""
+URLs for the Profile pages
+"""
 from django.urls import path
-from . import views
+from django.contrib.auth.decorators import login_required
+from profiles.views import Profile
 
 urlpatterns = [
-    path('', views.profile, name='profile'),
-    path('order_history/<order_number>', views.order_history, name='order_history'),
+    path('', login_required(Profile.as_view()), name='profile'),
+    path('order_history/<order_number>',
+         Profile.as_view(), name='order_history'),
 ]

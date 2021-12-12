@@ -5,7 +5,9 @@ Class views for the Checkout
 import json
 import stripe
 
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.views import View
@@ -123,14 +125,17 @@ class Checkout(View):
                     order_line_item.save()
                 except Game.DoesNotExist:
                     messages.error(request, (
-                        "One of the games in your bag wasn't found in our database. "
+                        "One of the games in your bag wasn't\
+                             found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]
+                ))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
@@ -159,7 +164,6 @@ class CheckoutSuccess(View):
         save_info = request.session.get('save_info')
         order = get_object_or_404(Order, order_number=order_number)
 
-        
         messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
