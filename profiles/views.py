@@ -44,6 +44,12 @@ class Profile(View):
 
         form = UserProfileForm(request.POST, instance=profile_user)
 
+        if 'delete_profile' in request.POST:
+            request.user.delete()
+            request.session.delete()
+            messages.success(request, 'Profile deleted successfully')
+            return render(request, 'home/index.html')
+
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
