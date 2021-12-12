@@ -250,7 +250,7 @@ label {
 }
 
 .card-img {
-    max-height: 350px;
+    height: 350px;
 }
 
 .btn-add {
