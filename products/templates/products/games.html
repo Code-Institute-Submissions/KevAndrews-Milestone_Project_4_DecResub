@@ -39,15 +39,17 @@
         {% for game in games %}
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card">
-                    {% if game.image %}
-                        <a href="{% url 'game_detail' game.id %}">
-                            <img class="card-img-top img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
-                        </a>
-                    {% else %}
-                        <a href="{% url 'game_detail' game.id %}">
-                            <img class="card-img-top img-fluid" src="/media/noimage.png" alt="{{ game.name }}">
-                        </a>
-                    {% endif %}
+                    <div class="card-header">
+                        {% if game.image %}
+                            <a href="{% url 'game_detail' game.id %}">
+                                <img class="card-img-top img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
+                            </a>
+                        {% else %}
+                            <a href="{% url 'game_detail' game.id %}">
+                                <img class="card-img-top img-fluid" src="/media/noimage.png" alt="{{ game.name }}">
+                            </a>
+                        {% endif %}
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">{{ game.name }}</h5>
                         <p class="card-text">

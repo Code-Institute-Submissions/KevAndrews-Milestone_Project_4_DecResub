@@ -249,8 +249,12 @@ label {
     color: #1f2833;
 }
 
-.card-img-top {
-    height: 350px;
+.card-header {
+    height: 400px;
+}
+
+.image-container {
+    background-color: #c5c6c7;
 }
 
 .btn-add {
