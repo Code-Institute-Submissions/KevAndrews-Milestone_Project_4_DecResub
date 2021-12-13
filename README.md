@@ -95,7 +95,8 @@ From the structure above I was able to generate the below Wireframes for the sit
 
 -   ### Design
     -   #### Colour Scheme
-        The colour scheme I chose for the site Blacks, Grey and Greens to give contrast through out the site I used the following Hex values.
+        The colour scheme I chose for the site Blacks, Grey and Greens to give contrast throughout the site I used the following Hex values. This colour palatte was found [here no.6](https://digitalsynopsis.com/design/website-color-schemes-palettes-combinations/)
+
         -   #0B0C10
         -   #1F2833
         -   #C5C6C7
@@ -118,6 +119,17 @@ From the structure above I was able to generate the below Wireframes for the sit
 - [JQuery](https://jquery.com/)
 
 # Database and Schema
+![Database Schema](wireframes/db_schema.png)
+
+For the deployed website I am using postgres provided by [Heroku](https://www.heroku.com/).
+The Custom tables that I created are:
+
+-   products_category
+-   products_game 
+-   profiles_userprofile 
+-   checkout_order 
+-   checkout_orderlineitem 
+
 
 # Deployment
 ## Forking the GitHub Repository
@@ -165,8 +177,8 @@ The GitHub Repository can be cloned in the following way:
 
 # Credits
 
-1.	
-2.	
+1.	Wikipedia - Game descriptions and images
+2.	Favicon - [here](https://www.favicon.cc/?action=icon&file_id=820294)
 
 # Content
 The images belong to documented third parties noted in Credits section above.
