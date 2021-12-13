@@ -44,7 +44,7 @@ class Profile(View):
 
         form = UserProfileForm(request.POST, instance=profile_user)
 
-        #Custom Code to remove Profiles
+        # Custom Code to remove Profiles
         if 'delete_profile' in request.POST:
             request.user.delete()
             request.session.delete()
@@ -70,7 +70,12 @@ class Profile(View):
 
         return render(request, 'profiles/profile.html', context)
 
-    def order_history(self, request, order_number):
+
+class OrderHistory(View):
+    """
+    Class for the Order History.
+    """
+    def get(self, request, order_number):
         """
         Display the user's order history.
         """
