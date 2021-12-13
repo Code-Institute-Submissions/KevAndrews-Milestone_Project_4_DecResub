@@ -32,7 +32,7 @@
                                 <a href="{% url 'game_detail' game.id %}">
                                     <img class="card-img-top img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
                                 </a>
-                            {% else %}
+                            {% else %} 
                                 <a href="{% url 'game_detail' game.id %}">
                                     <img class="card-img-top img-fluid" src="/media/noimage.png" alt="{{ game.name }}">
                                 </a>
