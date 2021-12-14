@@ -83,13 +83,36 @@ From the structure above I was able to generate the below Wireframes for the sit
 
 ### Wireframes
 
--   #### Balsamiq - [View]
+-   #### Balsamiq - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/MS4_Wireframes.bmpr)
 
 -   #### Desktop
+    1. Home Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/desktop/Home%20Page%20Desktop%20View.png)
+    2.  Cart Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/desktop/Cart%20Page%20Desktop%20View.png)
+    3. Confirmation Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/desktop/Confirmation%20Page%20Desktop%20View.png)
+    4. Game Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/desktop/Game%20Page%20Desktop%20View.png)
+    5. Genre Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/desktop/Genre%20Page%20Desktop%20View.png)
+    6. Login Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/desktop/Login%20Page%20Desktop%20View.png)
+    7. Profile Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/desktop/Profile%20Page%20Desktop%20View.png)
+    8. Sign-Up Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/desktop/Sign-Up%20Page%20Desktop%20View.png)
 
 -   #### Tablet
-
+    1. Home Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/tablet/Home%20Page%20Tablet%20View.png)
+    2.  Cart Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/tablet/Cart%20Page%20Tablet%20View.png)
+    3. Confirmation Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/tablet/Confirmation%20Page%20Tablet%20View.png)
+    4. Game Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/tablet/Game%20Page%20Tablet%20View.png)
+    5. Genre Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/tablet/Genre%20Page%20Tablet%20View.png)
+    6. Login Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/tablet/Login%20Page%20Tablet%20View.png)
+    7. Profile Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/tablet/Profile%20Page%20Tablet%20View.png)
+    8. Sign-Up Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/tablet/Sign-Up%20Page%20Tablet%20View.png)
 -   #### Mobile
+    1. Home Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/mobile/Home%20Page%20Mobile%20View.png)
+    2.  Cart Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/mobile/Cart%20Page%20Mobile%20View.png)
+    3. Confirmation Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/mobile/Confirmation%20Page%20Mobile%20View.png)
+    4. Game Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/mobile/Game%20Page%20Mobile%20View.png)
+    5. Genre Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/mobile/Genre%20Page%20Mobile%20View.png)
+    6. Login Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/mobile/Login%20Page%20Mobile%20View.png)
+    7. Profile Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/mobile/Profile%20Page%20Mobile%20View.png)
+    8. Sign-Up Page - [View](https://github.com/KevAndrews/Milestone_Project_4/blob/main/wireframes/mobile/Sign%20Up%20Page%20Mobile%20View.png)
 
 ## Surface Plane
 
