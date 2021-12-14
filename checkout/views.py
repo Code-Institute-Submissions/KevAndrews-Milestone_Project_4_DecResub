@@ -15,10 +15,10 @@ from django.conf import settings
 
 from cart.contexts import cart_contents
 from products.models import Game, Category
-from .forms import OrderForm
-from .models import Order, OrderLineItem
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 
 
 class Checkout(View):
@@ -138,7 +138,7 @@ class Checkout(View):
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse(
                 'checkout_success', args=[order.order_number]
-                ))
+            ))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
@@ -183,7 +183,9 @@ class CheckoutSuccess(View):
                     'default_street_address2': order.street_address2,
                     'default_county': order.county,
                 }
-                user_profile_form = UserProfileForm(profile_data, instance=profile)
+                user_profile_form = UserProfileForm(
+                    profile_data, instance=profile
+                )
                 if user_profile_form.is_valid():
                     user_profile_form.save()
 
@@ -203,6 +205,9 @@ class CheckoutSuccess(View):
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    Method to handle Cache on the Checkout
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY

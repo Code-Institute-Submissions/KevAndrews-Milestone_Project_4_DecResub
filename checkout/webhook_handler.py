@@ -1,17 +1,16 @@
 """
 Class views for the Webhook Handlers
 """
+import json
+import time
+
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
-
-from .models import Order, OrderLineItem
-from products.models import Game
 from profiles.models import UserProfile
-
-import json
-import time
+from products.models import Game
+from .models import Order, OrderLineItem
 
 
 class StripeWH_Handler:
@@ -141,7 +140,7 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-        
+
         self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | \
