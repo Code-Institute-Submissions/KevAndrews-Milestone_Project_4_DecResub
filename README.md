@@ -43,14 +43,9 @@ Gamers Corner, An e-commerce website were a user can search for and purchase gam
        6. As a Returning User, I want to be able view my order history.
  
  -   ### Frequent Administrator Goals
-       1. As a Frequent Administrator, I want to be able to see all customer and user orders.
-       2. As a Frequent Administrator, I want to be able to see all users.
-       3. As a Frequent Administrator, I want to be able to add products to the site.
-       4. As a Frequent Administrator, I want to be able to update product details.
-       5. As a Frequent Administrator, I want to be able to delete products from the site.
-       6. As a Frequent Administrator, I want to be able to add categories to the site.
-       7. As a Frequent Administrator, I want to be able to edit category names.
-       8. As a Frequent Administrator, I want to be able to delete categories.
+       1. As a Frequent Administrator, I want to be able to add products to the site.
+       2. As a Frequent Administrator, I want to be able to update product details.
+       3. As a Frequent Administrator, I want to be able to delete products from the site.
  
  -   ### Sorting and Searching Goals
        1. Sort a list of Products, either alphabetically A-Z or Z-A.

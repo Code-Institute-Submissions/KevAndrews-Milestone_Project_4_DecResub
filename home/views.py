@@ -22,7 +22,10 @@ class Index(View):
         categories = list(Category.objects.all())
 
         if bool(games):
-            feature_games = random.sample(games, 3)
+            if len(games) >= 3:
+                feature_games = random.sample(games, 3)
+            else:
+                feature_games = random.sample(games, len(games))
         else:
             feature_games = list()
 
