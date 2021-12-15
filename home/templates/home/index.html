@@ -9,13 +9,14 @@
         <hr class="my-4 w-25">
         <p class="lead text-center">
             Here at Gamers Corner we strive to bring you the best games at the lowest prices.<br>
-            You can browse our featured games or search through our catalog of games by using the links above or selecting the search icon at the top of the screen
+            You can browse our featured games or search through our catalog of games by using the links above or
+            selecting the search icon at the top of the screen
         </p>
         <hr class="my-4 w-25">
         {% if not request.user.is_authenticated %}
-            <p class="lead text-center">
-                <a class="btn btn-long" href="{% url 'account_signup' %}" role="button">Register</a>
-            </p>
+        <p class="lead text-center">
+            <a class="btn btn-long" href="{% url 'account_signup' %}" role="button">Register</a>
+        </p>
         {% endif %}
     </div>
     <div class="feature-title">
@@ -24,39 +25,39 @@
     </div>
     <div class="row mb-5">
         {% if games|length > 0 %}
-            {% for game in games %}
-                <div class="col-sm-4 mb-5">
-                    <div class="card">
-                        <div class="card-header">
-                            {% if game.image %}
-                                <a href="{% url 'game_detail' game.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
-                                </a>
-                            {% else %} 
-                                <a href="{% url 'game_detail' game.id %}">
-                                    <img class="card-img-top img-fluid" src="https://gamers-corner-ms4.s3.eu-west-1.amazonaws.com/media/noimage.png" alt="{{ game.name }}">
-                                </a>
-                            {% endif %}
+        {% for game in games %}
+        <div class="col-sm-4 mb-5">
+            <div class="card">
+                {% if game.image %}
+                <a href="{% url 'game_detail' game.id %}">
+                    <img class="card-img-top img-fluid" src="{{ game.image.url }}" alt="{{ game.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'game_detail' game.id %}">
+                    <img class="card-img-top img-fluid"
+                        src="https://gamers-corner-ms4.s3.eu-west-1.amazonaws.com/media/noimage.png"
+                        alt="{{ game.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ game.name }}</h5>
+                    <p class="card-text">Price: &euro; {{ game.price }}</p>
+                    <div class="row">
+                        <div class="col-sm-12 col-6 col-md-6 mb-2 details">
+                            <a href="{% url 'game_detail' game.id %}" class="btn">Details</a>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ game.name }}</h5>
-                            <p class="card-text">Price: &euro; {{ game.price }}</p>
-                            <div class="row">
-                                <div class="col-sm-12 col-6 col-md-6 mb-2 details">
-                                    <a href="{% url 'game_detail' game.id %}" class="btn">Details</a>
-                                </div>
-                                <form class="col-sm-12 col-6 col-md-6" action="{% url 'add_to_cart' game.id %}" method="POST">
-                                    {% csrf_token %}
-                                        <input type="submit" class="btn text-uppercase add" value="Add">
-                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                </form>
-                            </div>
-                        </div>
+                        <form class="col-sm-12 col-6 col-md-6" action="{% url 'add_to_cart' game.id %}" method="POST">
+                            {% csrf_token %}
+                            <input type="submit" class="btn text-uppercase add" value="Add">
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </form>
                     </div>
                 </div>
-            {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
         {% else %}
-            <h3 class="col-sm-12 text-center">No Games Found!</h3>   
+        <h3 class="col-sm-12 text-center">No Games Found!</h3>
         {% endif %}
     </div>
 </section>
