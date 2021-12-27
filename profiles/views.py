@@ -2,7 +2,9 @@
 Class Views for rhw Profile page
 """
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import (
+    render, get_object_or_404, redirect, reverse
+)
 from django.contrib import messages
 from django.views import View
 from checkout.models import Order
@@ -75,20 +77,36 @@ class OrderHistory(View):
     """
     Class for the Order History.
     """
+
     def get(self, request, order_number):
         """
         Display the user's order history.
         """
         order = get_object_or_404(Order, order_number=order_number)
 
-        messages.info(request, (
-            f'This is a past confirmation for order number {order_number}. '
-            'A confirmation email was sent on the order date.'
-        ))
+        # Custom Code Get Current User
+        profile_user = get_object_or_404(UserProfile, user=request.user)
 
-        context = {
-            'order': order,
-            'from_profile': True,
-        }
+        # Check if Order User id is equal to Current User id
+        # If True load order, else redirect back to Profile
+        if order.user_profile.id == profile_user.id:
+            messages.info(request, (
+                f'This is a past confirmation for order number\
+                    {order_number}. A confirmation email was\
+                         sent on the order date.'
+            ))
 
-        return render(request, 'checkout/checkout_success.html', context)
+            context = {
+                'order': order,
+                'from_profile': True,
+            }
+
+            return render(request, 'checkout/checkout_success.html', context)
+        else:
+            messages.info(request, (
+                'Current User does not have permission to view this order'
+            ))
+            return redirect(reverse('profile'))
+
+        # If we reach here something has gone wrong
+        return redirect(reverse('profile'))
