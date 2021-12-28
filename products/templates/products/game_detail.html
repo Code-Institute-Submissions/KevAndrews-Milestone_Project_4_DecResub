@@ -82,30 +82,7 @@
             </div>
         </div>
     </div>
-    <div class="row mb-5">
-        <div class="col-12">
-            <h3>Reviews</h3>
-            <hr>
-            <div class="review">
-                <div class="user-review-name">
-                    <strong>Reviewer: <u>Testing</u></strong>
-                </div>
-                <div class="user-review text-white">
-                    <em>"Some review for the game"</em>
-                </div>
-                {% if request.user.is_superuser %}
-                    <small>
-                        <a class="text-danger" href="#">Delete</a>
-                    </small>
-                {% endif %}
-            </div> 
-        </div>
-        {% if request.user.is_authenticated %}
-        <div class="col-12">
-            <button class="btn btn-long mt-3">Add Review</button>
-        </div>
-        {% endif %}
-    </div>
+    {% include 'reviews/includes/reviews.html' %}
 </section>
 {% endblock %}
 
