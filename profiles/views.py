@@ -81,6 +81,7 @@ class OrderHistory(View):
     def get(self, request, order_number):
         """
         Display the user's order history.
+        Custom Code
         """
         order = get_object_or_404(Order, order_number=order_number)
 
@@ -89,12 +90,21 @@ class OrderHistory(View):
 
         # Check if Order User id is equal to Current User id
         # If True load order, else redirect back to Profile
-        if order.user_profile.id == profile_user.id:
-            messages.info(request, (
-                f'This is a past confirmation for order number\
-                    {order_number}. A confirmation email was\
-                         sent on the order date.'
-            ))
+        if (order.user_profile.id == profile_user.id or
+                request.user.is_superuser):
+
+            if request.user.is_superuser:
+                messages.info(request, (
+                    f'This is a past confirmation for order number\
+                        {order_number}. This order belongs to\
+                            {order.user_profile}.'
+                ))
+            else:
+                messages.info(request, (
+                    f'This is a past confirmation for order number\
+                        {order_number}. A confirmation email was\
+                            sent on the order date.'
+                ))
 
             context = {
                 'order': order,

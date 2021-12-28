@@ -8,6 +8,8 @@ from django.dispatch import receiver
 
 from django_countries.fields import CountryField
 
+from products.models import Game
+
 
 class UserProfile(models.Model):
     """
