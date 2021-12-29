@@ -1,10 +1,13 @@
+"""
+Views Class for Review
+"""
 from django.shortcuts import redirect, reverse, get_object_or_404
 from django.contrib import messages
 
-from .models import Review
-from .forms import ReviewForm
 from products.models import Game
 from profiles.models import UserProfile
+from .models import Review
+from .forms import ReviewForm
 
 
 def add_review(request, game_id):
@@ -14,11 +17,11 @@ def add_review(request, game_id):
     """
     user = UserProfile.objects.get(user=request.user)
     game = get_object_or_404(Game, pk=game_id)
+
     review_form = ReviewForm()
     review_details = {
         'title': request.POST['title'],
         'description': request.POST['description'],
-        'rating': request.POST['rating'],
     }
     review_form = ReviewForm(review_details)
 
@@ -29,14 +32,11 @@ def add_review(request, game_id):
         review.game = game
         review.save()
 
-        reviews = Review.objects.filter(game=game)
-
         game.save()
 
-        messages.success(request, 'Thank you! Your review was added')
+        messages.success(request, 'Thank you! Your review has been added')
     else:
-        messages.error(request, 'Something went wrong. '
-                                'Make sure the form is valid.')
+        messages.error(request, 'Something went wrong.')
 
     return redirect(reverse('game_detail', args=(game_id,)))
 
@@ -48,15 +48,13 @@ def edit_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
     review_form = ReviewForm(request.POST, instance=review)
     game = Game.objects.get(name=review.game)
+
     if review_form.is_valid():
         review.save()
-
-        reviews = Review.objects.filter(game=game)
-
         game.save()
 
         # Success message if added
-        messages.success(request, 'Thank You! Your review was edited')
+        messages.success(request, 'Thank You! Review was edited')
     else:
         # Error message if form was invalid
         messages.error(request, 'Something went wrong. '
@@ -74,15 +72,12 @@ def delete_review(request, review_id):
 
     try:
         review.delete()
-
-        reviews = Review.objects.filter(game=game)
-
         game.save()
-        messages.success(request, 'Your review was deleted')
+        messages.success(request, 'Review was deleted')
 
     # If deletion failed, return an error message
     except Exception as e:
         messages.error(request, "We couldn't delete your review because "
-                                f" eroor:{e} occured. Try again later.")
+                                f" error:{e} occured. Try again later.")
 
     return redirect(reverse('game_detail', args=(review.game.id,)))

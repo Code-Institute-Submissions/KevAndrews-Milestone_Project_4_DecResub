@@ -1,12 +1,17 @@
 """
 Class views for the Games / Products
 """
+import random
+
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
 from django.views import View
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+
+from reviews.forms import ReviewForm
+from reviews.models import Review
 from .models import Game, Category
 from .forms import GameForm
 
@@ -90,9 +95,23 @@ class GameDetail(View):
 
         categories = list(Category.objects.all())
 
+        reviews_list = list(Review.objects.filter(game=game_id))
+
+        review_form = ReviewForm()
+
+        if bool(reviews_list):
+            if len(reviews_list) >= 3:
+                reviews = random.sample(reviews_list, 3)
+            else:
+                reviews = random.sample(reviews_list, len(reviews_list))
+        else:
+            reviews = list()
+
         context = {
             'game': game,
             'categories': categories,
+            'review_form': review_form,
+            'reviews': reviews,
             'nav': 'all_games'
         }
 
