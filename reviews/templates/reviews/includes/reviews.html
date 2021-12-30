@@ -14,7 +14,7 @@
           Title: {{ review.title }}
         </strong>
       </div>
-      <div class="user-review text-white">
+      <div class="user-review text-white col-6">
         <em>"{{ review.description }}"</em>
       </div>
       {% if request.user.is_superuser or request.user.is_authenticated and request.user.username|upper == review.user|upper %}
@@ -29,8 +29,8 @@
             <!-- Modal header with title and close button -->
             <div class="modal-header">
               <h5 class="modal-title text-uppercase" id="editModalLabel">Edit your review</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">X</span>
               </button>
             </div>
             <!-- Review form -->
@@ -64,8 +64,8 @@
           <div class="modal-content">
             <div class="modal-header text-uppercase">
               <h5 class="modal-title" id="deleteUserReview">Are you sure?</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">X</span>
               </button>
             </div>
             <div class="modal-body">
@@ -98,8 +98,8 @@
         <!-- Modal header with title and close button -->
         <div class="modal-header">
           <h5 class="modal-title text-uppercase" id="reviewModalLabel">Write a review</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">X</span>
           </button>
         </div>
         <!-- Review form -->

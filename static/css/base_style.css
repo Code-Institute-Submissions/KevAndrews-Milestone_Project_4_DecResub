@@ -85,12 +85,12 @@ label {
     color: white;
 }
 
-.links a{
-    color: #66fcf1;
+.text-danger {
     cursor: pointer;
 }
 
-.text-danger a{
+.links{
+    color: #66fcf1 !important;
     cursor: pointer;
 }
 
@@ -373,8 +373,12 @@ label {
 /* Custom CSS for Review Modal */
 .modal-content {
     color: white;
-    background-color: rgba(31, 40, 51, .4);
+    background-color: rgba(31, 40, 51, .95);
     font-family: 'Orbitron', sans-serif;
+}
+
+.modal-header {
+    border: 0;
 }
 
 /* CSS for mobile menu https://www.codeply.com/go/JPkcW2yWrB */
