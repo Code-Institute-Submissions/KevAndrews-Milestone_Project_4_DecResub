@@ -6,6 +6,7 @@
   <div class="col-12">
     <h3>Reviews</h3>
     <hr>
+    {% if reviews|length > 0 %}
     {% for review in reviews %}
     <div class="review mb-3">
       <div class="user-review-name">
@@ -82,6 +83,14 @@
       {% endif %}
     </div>
     {% endfor %}
+    {% else %}
+    <h3 class="col-sm-12 text-center">
+      No Reviews Found for this game!<br>
+      {% if request.user.is_authenticated %}
+      Why not leave one for other customers?
+      {% endif %}
+    </h3>
+    {% endif %}
   </div>
 </div>
 {% endblock %}
