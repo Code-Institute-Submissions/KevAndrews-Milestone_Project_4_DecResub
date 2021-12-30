@@ -2,7 +2,7 @@
 
 {% block content %}
 <!-- Reviews container -->
-<div class="row">
+<div class="row mb-3">
   <div class="col-12">
     <h3>Reviews</h3>
     <hr>
@@ -97,7 +97,7 @@
 
 <!-- Add and Edit Review Modal -->
 {% if request.user.is_superuser or request.user.is_authenticated %}
-<div class="mb-3">
+<div class="mb-3 text-center">
   <button type="button" class="btn btn-long" data-toggle="modal" data-target="#reviewModal">
     Add Review
   </button>
