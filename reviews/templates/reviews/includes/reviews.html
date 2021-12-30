@@ -1,6 +1,6 @@
-{% block content %}
 {% load static %}
 
+{% block content %}
 <!-- Reviews container -->
 <div class="row">
   <div class="col-12">
@@ -17,9 +17,9 @@
       <div class="user-review text-white">
         <em>"{{ review.description }}"</em>
       </div>
-      {% if request.user.is_superuser or request.user.is_authenticated and request.user.id == review.user.id %}
+      {% if request.user.is_superuser or request.user.is_authenticated and request.user.username|upper == review.user|upper %}
       <small>
-        <a class="text-white" data-toggle="modal" data-target="#editReview{{review.id}}">Edit | </a>
+        <a class="links" data-toggle="modal" data-target="#editReview{{review.id}}">Edit | </a>
       </small>
       <!-- Edit Review Modal -->
       <div class="modal fade" id="editReview{{review.id}}" tabindex="-1" aria-labelledby="editReviewLabel"
@@ -54,7 +54,7 @@
         </div>
       </div>
       {% endif %}
-      {% if request.user.is_superuser or request.user.id == review.user.id %}
+      {% if request.user.is_superuser or request.user.is_authenticated and request.user.username|upper == review.user|upper %}
       <small>
         <a class="text-danger" data-toggle="modal" data-target="#deleteReview">Delete</a>
       </small>
@@ -87,7 +87,7 @@
 {% endblock %}
 
 <!-- Add and Edit Review Modal -->
-{% if request.user.is_authenticated %}
+{% if request.user.is_superuser or request.user.is_authenticated %}
 <div class="mb-3">
   <button type="button" class="btn btn-long" data-toggle="modal" data-target="#reviewModal">
     Add Review

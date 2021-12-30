@@ -85,8 +85,13 @@ label {
     color: white;
 }
 
-.links {
+.links a{
     color: #66fcf1;
+    cursor: pointer;
+}
+
+.text-danger a{
+    cursor: pointer;
 }
 
 .links:hover {
