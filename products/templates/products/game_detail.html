@@ -68,6 +68,12 @@
                             </div>
                         </div>
                         <div class="col-12 mt-2">
+                            <a href="{% url 'add_to_wishlist' game.id %}" class="btn btn-long mt-3">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Wish</span>
+                            </a>
                             <a href="{% url 'games' %}" class="btn btn-long mt-3">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>

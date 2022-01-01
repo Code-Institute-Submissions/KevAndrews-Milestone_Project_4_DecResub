@@ -1,0 +1,20 @@
+{% load static %}
+
+{% block content %}
+<!-- Wishlist container -->
+<div class="row mb-3">
+    <div class="col-12">
+        <h3>Wishlist</h3>
+        <hr>
+        {% if wishlist|length > 0 %}
+        {% for game in wishlist %}
+
+        {% endfor %}
+        {% else %}
+        <h3 class="col-sm-12 text-center">
+            No games have been added to the Wishlist.
+        </h3>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

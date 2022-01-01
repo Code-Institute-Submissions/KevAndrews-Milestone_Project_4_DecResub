@@ -8,6 +8,7 @@ from django.shortcuts import (
 from django.contrib import messages
 from django.views import View
 from checkout.models import Order
+from wishlists.models import Wishlist
 from .models import UserProfile
 from .forms import UserProfileForm
 
@@ -28,9 +29,12 @@ class Profile(View):
         form = UserProfileForm(instance=profile_user)
         orders = profile_user.orders.all()
 
+        wishlist = Wishlist.objects.all()
+
         context = {
             'form': form,
             'orders': orders,
+            'wishlist': wishlist,
             'on_profile_page': True
         }
 
