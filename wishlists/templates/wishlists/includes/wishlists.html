@@ -8,12 +8,18 @@
         <hr>
         {% if wishlist|length > 0 %}
         {% for game in wishlist %}
-
+            {{game}}
         {% endfor %}
         {% else %}
         <h3 class="col-sm-12 text-center">
             No games have been added to the Wishlist.
         </h3>
+        <a href="{% url 'create_wishlist' %}" class="btn btn-long mt-3">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Wish</span>
+        </a>
         {% endif %}
     </div>
 </div>
