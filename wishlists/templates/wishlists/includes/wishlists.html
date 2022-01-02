@@ -11,10 +11,10 @@
             <div class="row mb-3">
                 <div class="col-2 mb-1">
                     <a href="{% url 'game_detail' game.id %}">
-                        {% if item.game.image %}
-                            <img class="w-100" src="{{ game.image.url }}" alt="{{ game.name }}">
+                        {% if game.image %}
+                            <img class="w-100" src="{{ game.image_url }}" alt="{{ game.name }}">
                         {% else %}
-                            <img class="w-100" src="/media/noimage.png" alt="{{ game.name }}">
+                            <img class="w-100" src="https://gamers-corner-ms4.s3.eu-west-1.amazonaws.com/media/noimage.png" alt="{{ game.name }}">
                         {% endif %}
                     </a>
                 </div>
