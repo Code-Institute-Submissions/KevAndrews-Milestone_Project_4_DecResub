@@ -16,8 +16,7 @@ class Wishlist(models.Model):
 
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     game_ids = models.CharField(max_length=200, null=True, blank=True)
-    title = models.CharField(max_length=50, default='Wishlist 1')
     date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.title
+        return str(self.user)

@@ -11,7 +11,6 @@ class WishlistAdmin(admin.ModelAdmin):
     Admin Class for Wishlist
     """
     list_display = (
-        'title',
         'user',
         'date_created'
     )

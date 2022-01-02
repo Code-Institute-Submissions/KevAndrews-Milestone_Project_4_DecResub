@@ -8,18 +8,29 @@
         <hr>
         {% if wishlist|length > 0 %}
         {% for game in wishlist %}
-            {{game}}
+            <div class="row mb-3">
+                <div class="col-2 mb-1">
+                    <a href="{% url 'game_detail' game.id %}">
+                        {% if item.game.image %}
+                            <img class="w-100" src="{{ game.image.url }}" alt="{{ game.name }}">
+                        {% else %}
+                            <img class="w-100" src="/media/noimage.png" alt="{{ game.name }}">
+                        {% endif %}
+                    </a>
+                </div>
+                <div class="col-6">
+                    <p class="my-0"><h5><strong>{{ game.name }}</strong></h5></p>
+                    <p class="my-0">&euro;{{ game.price }}</p>
+                </div>
+                <div class="col-2 text-right">
+                    <a href="{% url 'delete_from_wishlist' game.id %}" class="btn btn-danger text-white" onclick="return confirm('Are you sure you wish to delete this game from your wishlist?')">X</a>
+                </div>
+            </div>
         {% endfor %}
         {% else %}
         <h3 class="col-sm-12 text-center">
             No games have been added to the Wishlist.
         </h3>
-        <a href="{% url 'create_wishlist' %}" class="btn btn-long mt-3">
-            <span class="icon">
-                <i class="fas fa-chevron-left"></i>
-            </span>
-            <span class="text-uppercase">Wish</span>
-        </a>
         {% endif %}
     </div>
 </div>

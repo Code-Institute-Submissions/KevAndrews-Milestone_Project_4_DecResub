@@ -19,7 +19,7 @@ class WishlistForm(forms.ModelForm):
             'date_created',
             )
 
-        fields = ['title', 'game_ids']
+        fields = ['game_ids']
 
     def __init__(self, *args, **kwargs):
         """
@@ -27,7 +27,6 @@ class WishlistForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'title': 'Title',
             'game_ids': 'Game_ids',
         }
 

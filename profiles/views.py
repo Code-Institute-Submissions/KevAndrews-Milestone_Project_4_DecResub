@@ -9,6 +9,7 @@ from django.contrib import messages
 from django.views import View
 from checkout.models import Order
 from wishlists.models import Wishlist
+from products.models import Game
 from .models import UserProfile
 from .forms import UserProfileForm
 
@@ -29,12 +30,32 @@ class Profile(View):
         form = UserProfileForm(instance=profile_user)
         orders = profile_user.orders.all()
 
-        wishlist = Wishlist.objects.all()
+        # Custom Code for Wishlist Model
+        wishlist_games = list()
+
+        # Check if a wishlist for the given user exists
+        check_wishlist = Wishlist.objects.filter(user=profile_user).exists()
+
+        if check_wishlist:
+            # Get the wishlist for the user
+            wishlist = Wishlist.objects.get(user=profile_user)
+
+            # Check if the wishlist is empty
+            if wishlist.game_ids:
+                list_of_games = wishlist.game_ids.split(',')
+
+                for id in list_of_games:
+                    # Check Game still exists
+                    check_game = Game.objects.filter(id=int(id)).exists()
+
+                    if check_game:
+                        game_obj = Game.objects.get(id=int(id))
+                        wishlist_games.append(game_obj)
 
         context = {
             'form': form,
             'orders': orders,
-            'wishlist': wishlist,
+            'wishlist': wishlist_games,
             'on_profile_page': True
         }
 
