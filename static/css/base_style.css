@@ -110,6 +110,11 @@ label {
     min-width: 150px;
 }
 
+.disable {
+    pointer-events: none;
+    cursor: default;
+ }
+
 /* Custom CSS for the jumbotron */
 .jumbotron {
     background-color: rgba(31, 40, 51, .4);

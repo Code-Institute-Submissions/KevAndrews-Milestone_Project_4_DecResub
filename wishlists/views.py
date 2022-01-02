@@ -26,17 +26,37 @@ def add_to_wishlist(request, game_id):
         if wishlist.game_ids:
             list_of_games = wishlist.game_ids.split(',')
 
-            if not str(game_id) in list_of_games:
-                wishlist.game_ids += f',{game_id}'
+            if len(list_of_games) < 10:
+                if not str(game_id) in list_of_games:
+                    wishlist.game_ids += f',{game_id}'
 
-                # Check if the Wishlist already exists and updated or create
-                wishlist = Wishlist.objects.update_or_create(
-                    user=user, defaults={"game_ids": wishlist.game_ids}
-                )
+                    # Check if the Wishlist already exists and updated or create
+                    wishlist = Wishlist.objects.update_or_create(
+                        user=user, defaults={"game_ids": wishlist.game_ids}
+                    )
 
-                messages.success(request, 'Added Game to your Wishlist')
+                    messages.success(request, 'Added Game to your Wishlist')
+
+                    return redirect(reverse('game_detail', args=(game_id,)))
+                else:
+                    messages.warning(
+                        request, 'Game is already in your Wishlist'
+                        )
+
+                    return redirect(reverse('game_detail', args=(game_id,)))
             else:
-                messages.success(request, 'Game is already in your Wishlist')
+                messages.warning(
+                    request, 'You can only have 10 games in your Wishlist'
+                    )
+                return redirect(reverse('game_detail', args=(game_id,)))
+        else:
+            # If Check fails create and add selected game
+            # Check if the Wishlist already exists and updated or create
+            Wishlist.objects.update_or_create(
+                user=user, defaults={"game_ids": game_id}
+            )
+
+            messages.success(request, 'Added Game to your Wishlist')
     else:
         # If Check fails create and add selected game
         # Check if the Wishlist already exists and updated or create
@@ -70,8 +90,6 @@ def delete_from_wishlist(request, game_id):
                 list_of_games.remove(str(game_id))
 
                 wishlist.game_ids = ','.join(map(str, list_of_games))
-
-                print(wishlist.game_ids)
 
                 # Check if the Wishlist already exists and updated or create
                 wishlist = Wishlist.objects.update_or_create(

@@ -68,12 +68,6 @@
                             </div>
                         </div>
                         <div class="col-12 mt-2">
-                            <a href="{% url 'add_to_wishlist' game.id %}" class="btn btn-long mt-3">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Wish</span>
-                            </a>
                             <a href="{% url 'games' %}" class="btn btn-long mt-3">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
@@ -81,6 +75,15 @@
                                 <span class="text-uppercase">Browse</span>
                             </a>
                             <input type="submit" class="btn text-uppercase mt-3" value="Add">
+                            <br>
+                            {% if request.user.is_superuser or request.user.is_authenticated %}
+                            <a href="{% url 'add_to_wishlist' game.id %}" class="btn btn-long mt-3 {% if in_wishlist == True %}disabled{% endif %}">
+                                <span class="icon">
+                                    <i class="fas fa-star"></i>
+                                </span>
+                                <span class="text-uppercase">Wishlist</span>
+                            </a>
+                            {% endif %}
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>

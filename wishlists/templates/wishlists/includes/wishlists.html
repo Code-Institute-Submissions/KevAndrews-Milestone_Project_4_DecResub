@@ -4,7 +4,7 @@
 <!-- Wishlist container -->
 <div class="row mb-3">
     <div class="col-12">
-        <h3>Wishlist</h3>
+        <h3>Wishlist - {{ wishlist|length }} / 10</h3>
         <hr>
         {% if wishlist|length > 0 %}
         {% for game in wishlist %}

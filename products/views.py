@@ -12,6 +12,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 
 from reviews.forms import ReviewForm
 from reviews.models import Review
+from profiles.models import UserProfile
+from wishlists.models import Wishlist
 from .models import Game, Category
 from .forms import GameForm
 
@@ -99,6 +101,10 @@ class GameDetail(View):
 
         review_form = ReviewForm()
 
+        is_in_wishlist = False
+
+        # Check if there are reviews for
+        # this game and display
         if bool(reviews_list):
             if len(reviews_list) >= 3:
                 reviews = random.sample(reviews_list, 3)
@@ -107,11 +113,31 @@ class GameDetail(View):
         else:
             reviews = list()
 
+        # Check if User has game in
+        # their wishlist
+        if request.user.is_authenticated:
+            user = UserProfile.objects.get(user=request.user)
+
+            # Check if a wishlist for the given user exists
+            check_wishlist = Wishlist.objects.filter(user=user).exists()
+
+            if check_wishlist:
+                # Get the wishlist for the user
+                wishlist = Wishlist.objects.get(user=user)
+
+                # Check if the wishlist is empty
+                if wishlist.game_ids:
+                    list_of_games = wishlist.game_ids.split(',')
+
+                    if str(game_id) in list_of_games:
+                        is_in_wishlist = True
+
         context = {
             'game': game,
             'categories': categories,
             'review_form': review_form,
             'reviews': reviews,
+            'in_wishlist': is_in_wishlist,
             'nav': 'all_games'
         }
 
