@@ -30,7 +30,8 @@ def add_to_wishlist(request, game_id):
                 if not str(game_id) in list_of_games:
                     wishlist.game_ids += f',{game_id}'
 
-                    # Check if the Wishlist already exists and updated or create
+                    # Check if the Wishlist already exists and
+                    # updated or create
                     wishlist = Wishlist.objects.update_or_create(
                         user=user, defaults={"game_ids": wishlist.game_ids}
                     )
@@ -41,13 +42,13 @@ def add_to_wishlist(request, game_id):
                 else:
                     messages.warning(
                         request, 'Game is already in your Wishlist'
-                        )
+                    )
 
                     return redirect(reverse('game_detail', args=(game_id,)))
             else:
                 messages.warning(
                     request, 'You can only have 10 games in your Wishlist'
-                    )
+                )
                 return redirect(reverse('game_detail', args=(game_id,)))
         else:
             # If Check fails create and add selected game
@@ -96,6 +97,8 @@ def delete_from_wishlist(request, game_id):
                     user=user, defaults={"game_ids": wishlist.game_ids}
                 )
 
-                messages.success(request, 'Selected game has been removed from Wishlist')
+                messages.success(request,
+                                 'Selected game has been removed from Wishlist'
+                                 )
 
     return redirect(reverse('profile'))

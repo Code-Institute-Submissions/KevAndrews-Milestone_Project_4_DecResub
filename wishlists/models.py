@@ -5,7 +5,6 @@ Wishlist models
 from django.db import models
 
 from profiles.models import UserProfile
-from products.models import Game
 
 
 class Wishlist(models.Model):
