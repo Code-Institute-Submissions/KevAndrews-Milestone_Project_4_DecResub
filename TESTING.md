@@ -90,10 +90,40 @@
             ![Checkout Page](readme_images/confirmation_email.png)
 
  -   ### Review Goals
-       1. Add a review to a game.
-       2. Update / Edit a review on a game, Admin can Edit all reviews, Logged in users can Edit only their reviews.
-       3. Remove a review on a game, Admin can Remove all reviews, Logged in users can Remove only their reviews.
+       1. Add a review to a game.<br>
+          Anonymous User View<br>
+          ![Anonymous User](readme_images/not_logged_in.png)<br>
+          Logged in User View<br>
+          ![Logged in User](readme_images/logged_in.png)<br>
+          Adding a Review<br>
+          ![Add Reveiw](readme_images/add_review.png)<br>
+          Review Added<br>
+          ![Review Added](readme_images/review_added.png)
+       2. Edit a review on a game, Admin can Edit all reviews, Logged in users can Edit only their reviews.<br>
+          Edit a Review <br>
+          ![Edit Review](readme_images/edit_review.png)<br>
+          Review Edited<br>
+          ![Review Edited](readme_images/edited_review.png)
+       3. Remove a review on a game, Admin can Remove all reviews, Logged in users can Remove only their reviews.<br>
+          Delete a Review <br>
+          ![Delete Review](readme_images/delete_review.png)<br>
+          Review Deleted<br>
+          ![Review Deleted](readme_images/deleted_review.png)
 
  -   ### Wishlist Goals
-       1. Add a game to a Wishlist.
-       3. Remove a game from Wishlist, Logged in users can Remove only games from their Wishlist.
+       1. Add a game to a Wishlist.<br>
+          Anonymous User View<br>
+          ![Anonymous User](readme_images/not_logged_in.png)<br>
+          Logged in User View<br>
+          ![Logged in User](readme_images/logged_in.png)<br>
+          Adding to Wishlist<br>
+          ![Add Wishlist](readme_images/added_wishlist.png)<br>
+          View Wishlist<br>
+          ![View Wishlist](readme_images/view_wishlist.png)<br>
+          Limit Wishlist<br>
+          ![Limit Wishlist](readme_images/limit_wishlist.png)
+       3. Remove a game from Wishlist, Logged in users can Remove only games from their Wishlist.<br>
+          Delete from Wishlist <br>
+          ![Delete Wishlist](readme_images/delete_wishlist.png)<br>
+          Wishlist Deleted<br>
+          ![Wishlist Deleted](readme_images/deleted_wishlist.png)

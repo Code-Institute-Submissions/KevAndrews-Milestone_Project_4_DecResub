@@ -156,6 +156,8 @@ The Custom tables that I created are:
 -   profiles_userprofile 
 -   checkout_order 
 -   checkout_orderlineitem 
+-   wishlists_wishlist (note: this is titled as wishlists in the above image)
+-   reviews_review (note: this is titled as reviews in the above image)
 
 
 # Deployment
