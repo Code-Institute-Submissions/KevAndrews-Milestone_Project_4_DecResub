@@ -59,6 +59,15 @@ Gamers Corner, An e-commerce website were a user can search for and purchase gam
        4. Purchase the products in the cart.
        5. Sent confirmation email of a purchase / order.
 
+ -   ### Review Goals
+       1. Add a review to a game.
+       2. Update / Edit a review on a game, Admin can Edit all reviews, Logged in users can Edit only their reviews.
+       3. Remove a review on a game, Admin can Remove all reviews, Logged in users can Remove only their reviews.
+
+ -   ### Wishlist Goals
+       1. Add a game to a Wishlist.
+       3. Remove a game from Wishlist, Logged in users can Remove only games from their Wishlist.
+
 # Design
 ## Strategy Plane
 Gamers Corner aims to provide users the ability to purchase games and track order history through a profile page

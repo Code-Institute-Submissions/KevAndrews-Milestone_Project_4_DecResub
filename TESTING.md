@@ -88,3 +88,12 @@
 
        6. Sent confirmation email of a purchase / order.<br>
             ![Checkout Page](readme_images/confirmation_email.png)
+
+ -   ### Review Goals
+       1. Add a review to a game.
+       2. Update / Edit a review on a game, Admin can Edit all reviews, Logged in users can Edit only their reviews.
+       3. Remove a review on a game, Admin can Remove all reviews, Logged in users can Remove only their reviews.
+
+ -   ### Wishlist Goals
+       1. Add a game to a Wishlist.
+       3. Remove a game from Wishlist, Logged in users can Remove only games from their Wishlist.
