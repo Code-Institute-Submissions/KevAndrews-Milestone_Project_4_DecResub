@@ -72,7 +72,7 @@ def add_to_wishlist(request, game_id):
 
 def delete_from_wishlist(request, game_id):
     """
-    Allow user to add a game to their wishlist
+    Allow user to delete a game to their wishlist
     """
     user = UserProfile.objects.get(user=request.user)
 
